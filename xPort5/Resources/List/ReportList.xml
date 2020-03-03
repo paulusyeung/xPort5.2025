@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Reports PanelType="CardView">
+    <Report Caption="Price List" Image_ListView="Icons.48x48.ico_pricelist.gif" Image_CardView="Icons.48x48.ico_pricelist.gif" Image_Thumb="Icons.48x48.ico_pricelist.gif" Description="Price List" Tag="Price_List" LastAccessedOn="">
+    </Report>
+    <Report Caption="Price List-Faster Version" Image_ListView="Icons.48x48.ico_pricelist.gif" Image_CardView="Icons.48x48.ico_pricelist.gif" Image_Thumb="Icons.48x48.ico_pricelist.gif" Description="Price List(Faster Version)" Tag="Price_List_Faster_Version" LastAccessedOn="">
+    </Report>
+    <Report Caption="Price List-Faster Version(sort by Article)" Image_ListView="Icons.48x48.ico_pricelist.gif" Image_CardView="Icons.48x48.ico_pricelist.gif" Image_Thumb="Icons.48x48.ico_pricelist.gif" Description="Price List(Faster Version Sort by Article)" Tag="Price_List_Faster_Version_SortBy_Article" LastAccessedOn="">
+    </Report>
+    <Report Caption="Price List-Sort by Article Code" Image_ListView="Icons.48x48.ico_pricelist.gif" Image_CardView="Icons.48x48.ico_pricelist.gif" Image_Thumb="Icons.48x48.ico_pricelist.gif" Description="Price List(Sort by Article Code)" Tag="Price_List_SortBy_ArticleCode" LastAccessedOn="">
+    </Report>
+    <Report Caption="Price List-with Particular" Image_ListView="Icons.48x48.ico_pricelist.gif" Image_CardView="Icons.48x48.ico_pricelist.gif" Image_Thumb="Icons.48x48.ico_pricelist.gif" Description="Price List(with Particular)" Tag="Price_List_with_Particular" LastAccessedOn="">
+    </Report>
+    <Report Caption="Price List-Without Supplier Name" Image_ListView="Icons.48x48.ico_pricelist.gif" Image_CardView="Icons.48x48.ico_pricelist.gif" Image_Thumb="Icons.48x48.ico_pricelist.gif" Description="Price List(Without SupplierName)" Tag="Price_List_Without_SupplierName" LastAccessedOn="">
+    </Report>
+    <Report Caption="Quotation List" Image_ListView="Icons.48x48.ico_pricelist.gif" Image_CardView="Icons.48x48.ico_pricelist.gif" Image_Thumb="Icons.48x48.ico_pricelist.gif" Description="Quotation List" Tag="Quotation_List" LastAccessedOn="">
+    </Report>
+    <Report Caption="Quotation List-Without Photo" Image_ListView="Icons.48x48.ico_pricelist.gif" Image_CardView="Icons.48x48.ico_pricelist.gif" Image_Thumb="Icons.48x48.ico_pricelist.gif" Description="Quotation List(Without Photo)" Tag="Quotation_List_Without_Photo" LastAccessedOn="">
+    </Report>
+  </Reports>
+</root>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Reports PanelType="CardView">
+    <Report Caption="Pre-Order List" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Pre-Order List" Tag="PreOrder_List" LastAccessedOn="" />
+    <Report Caption="Pre-Order List - for Customer" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Pre-Order List - for Customer" Tag="PreOrder_ListForCustomer" LastAccessedOn="" />
+    <Report Caption="Pre-Order List - for Supplier" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Pre-Order List - for Supplier" Tag="PreOrder_ListForSupplier" LastAccessedOn="" />
+    <Report Caption="Confirmation Sheet" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Confirmation Sheet" Tag="Confirmation_Sheet" LastAccessedOn="" />
+    <Report Caption="Pre-Order List" Image_ListView="Icons.48x48.excel_48x48.gif" Image_CardView="Icons.48x48.excel_48x48.gif" Image_Thumb="Icons.48x48.excel_48x48.gif" Description="Pre-Order List in Excel format" Tag="PreOrder_List_Xls" LastAccessedOn="" />
+  </Reports>
+</root>

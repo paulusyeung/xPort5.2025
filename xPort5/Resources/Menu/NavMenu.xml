@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<factory Caption="Factory">
+		<item Caption="Product" ImageUrl="16x16.pumpkin_16.png" Tag="Product" />
+		<item Caption="Factory Document" ImageUrl="16x16.reports16.png" Tag="Document" />
+	</factory>
+	<order Caption="Order">
+		<item Caption="Quotation" ImageUrl="16x16.reports16.png" Tag="Order.Quotation" />
+		<item Caption="Pre-Order List" ImageUrl="16x16.reports16.png" Tag="Order.PreOrderList" />
+		<item Caption="Sales Contract" ImageUrl="16x16.reports16.png" Tag="Order.SalesContract" />
+		<item Caption="Purchase Contract" ImageUrl="16x16.reports16.png" Tag="Order.PurchaseContract" />
+		<item Caption="Invoice" ImageUrl="16x16.reports16.png" Tag="Order.Invoice" />
+		<item Caption="Sample" ImageUrl="16x16.reports16.png" Tag="Order.Sample" />
+		<item Caption="Analysis">
+			<item Caption="Quote History" ImageUrl="16x16.16_reports.gif" Tag="Analysis.QuoteHistory" />
+			<item Caption="O/S Shipment" ImageUrl="16x16.16_reports.gif" Tag="Analysis.OutstandingShipment" />
+			<item Caption="O/S Sample" ImageUrl="16x16.16_reports.gif" Tag="Analysis.OutstandingSample" />
+			<item Caption="Purchase History" ImageUrl="16x16.16_reports.gif" Tag="Analysis.PurchaseHistory" />
+			<item Caption="Shipment History" ImageUrl="16x16.16_reports.gif" Tag="Analysis.ShipmentHistory" />
+			<item Caption="Shipment History 2" ImageUrl="16x16.16_reports.gif" Tag="Analysis.ShipmentHistory2" />
+		</item>
+		<item Caption="Coding">
+			<item Caption="Product" ImageUrl="16x16.pumpkin_16.png" Tag="Coding.Product" />
+			<item Caption="Customer" ImageUrl="16x16.customersingle_16.png" Tag="Coding.Customer" />
+			<item Caption="Supplier" ImageUrl="16x16.suppliersingle_16.gif" Tag="Coding.Supplier" />
+			<item Caption="Currency" ImageUrl="16x16.money_16.png" Tag="Coding.Currency" />
+		</item>
+	</order>
+	<admin Caption="Admin">
+		<item Caption="Sales Turnover" ImageUrl="16x16.chart16.png" Tag="Olap.SalesTurnover" />
+		<item Caption="Top 10 Supplier" ImageUrl="16x16.chart16.png" Tag="Olap.Top10Supplier" />
+		<item Caption="O/S Order" ImageUrl="16x16.chart16.png" Tag="Olap.OutstandingOrder" />
+		<item Caption="Invoice Summary" ImageUrl="16x16.chart16.png" Tag="Olap.InvoiceSummary" />
+		<item Caption="Invoice By Month" ImageUrl="16x16.chart16.png" Tag="Olap.InvoiceByMonth" />
+		<item Caption="Sales Contract" ImageUrl="16x16.chart16.png" Tag="Olap_SalesContract" />
+		<item Caption="O/S Profit" ImageUrl="16x16.chart16.png" Tag="Olap.OutstandingProfit" />
+		<item Caption="Shipment Summary" ImageUrl="16x16.chart16.png" Tag="Olap.ShipmentSummary" />
+		<item Caption="Coding">
+			<item Caption="Address" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Address" />
+			<item Caption="Category" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Category" />
+			<item Caption="Charge" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Charge" />
+			<item Caption="City" ImageUrl="16x16.table_doc_16.png" Tag="Coding.City" />
+			<item Caption="Class" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Class" />
+			<item Caption="Color" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Color" />
+			<item Caption="Country" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Country" />
+			<item Caption="Department" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Dept" />
+			<item Caption="Job Title" ImageUrl="16x16.table_doc_16.png" Tag="Coding.JobTitle" />
+			<item Caption="Origin" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Origin" />
+			<item Caption="Package" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Package" />
+			<item Caption="Payment Terms" ImageUrl="16x16.table_doc_16.png" Tag="Coding.PaymentTerms" />
+			<item Caption="Port" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Port" />
+			<item Caption="Province" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Province" />
+			<item Caption="Region" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Region" />
+			<item Caption="Remarks" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Remarks" />
+			<item Caption="Salutation" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Salutation" />
+			<item Caption="Shipping Mark" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Shippingmark" />
+			<item Caption="Unit of Measures" ImageUrl="16x16.table_doc_16.png" Tag="Coding.Uom" />
+			<item Caption="Staff" ImageUrl="16x16.staffsingle_16.png" Tag="Coding.Staff" />
+      <item Caption="User" ImageUrl="16x16.user.png" Tag="Coding.User" />
+    </item>
+  </admin>
+	<settings Caption="Settings">
+		<item Caption="System Parameters" ImageUrl="16x16.settings16.png" Tag="Settings.SystemParameters" />
+		<item Caption="Coding">
+			<item Caption="Division" ImageUrl="16x16.table_raw_16.png" Tag="Coding.Division" />
+			<item Caption="Group" ImageUrl="16x16.table_raw_16.png" Tag="Coding.Group" />
+			<item Caption="Phone Label" ImageUrl="16x16.table_raw_16.png" Tag="Coding.PhoneLabel" />
+			<item Caption="Migrate Product Picture" ImageUrl="16x16.table_raw_16.png" Tag="Coding.MigrateProductPicture" />
+		</item>
+	</settings>
+</root>

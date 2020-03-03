@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Reports PanelType="CardView">
+    <Report Caption="Sales Contract" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Sales Contract" Tag="Sales_Contract" LastAccessedOn="" />
+    <Report Caption="Sales Contract - by Line Number" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Sales Contract - by Line Number" Tag="Sales_ContractByLineNumber" LastAccessedOn="" />
+    <Report Caption="Sales Contract - with One Shipping Mark" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Sales Contract - with One Shipping Mark" Tag="Sales_ContractWithOneShippingMark" LastAccessedOn="" />
+    <Report Caption="Sales Contract - without Shipping Mark" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Sales Contract - wihtout Shipping Mark" Tag="Sales_ContractWithoutShippingMark" LastAccessedOn="" />
+    <Report Caption="Proforma Invoice" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Proforma Invoice" Tag="Proforma_Invoice" LastAccessedOn="" />
+    <Report Caption="Proforma Invoice - by Line Number" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Proforma Invoice" Tag="Proforma_InvoiceByLineNumber" LastAccessedOn="" />
+    <Report Caption="Proforma Invoice - without Shipping Mark" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Proforma Invoice" Tag="Proforma_InvoiceWithoutShippingMark" LastAccessedOn="" />
+    <Report Caption="Sales Contract" Image_ListView="Icons.48x48.excel_48x48.gif" Image_CardView="Icons.48x48.excel_48x48.gif" Image_Thumb="Icons.48x48.excel_48x48.gif" Description="Sales Contract in Excel format" Tag="Sales_Contract_Xls" LastAccessedOn="" />
+  </Reports>
+</root>

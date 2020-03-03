@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<factory Caption="Factory">
+		<item Caption="Product" ImageUrl="16x16.pumpkin_16.png" Tag="Factory.Product" />
+		<item Caption="Factory Document" ImageUrl="16x16.reports16.png" Tag="Factory.Document" />
+	</factory>
+</root>

@@ -1,0 +1,19 @@
+<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v7.2" Namespace="DevExpress.Web.ASPxPivotGrid" TagPrefix="dxwpg" %>
+<dxwpg:ASPxPivotGrid runat="server">
+	<Images ImageFolder="~/App_Themes/Glass/{0}/"></Images>
+	<Styles CssFilePath="~/App_Themes/Glass/{0}/styles.css" CssPostfix="Glass">
+        <HeaderStyle>
+            <HoverStyle>
+                <BackgroundImage Repeat="RepeatX" ImageUrl="~/App_Themes/Glass/PivotGrid/pgHeaderBackHot.gif"></BackgroundImage>
+            </HoverStyle>
+            <BackgroundImage Repeat="RepeatX" ImageUrl="~/App_Themes/Glass/PivotGrid/pgHeaderBack.gif"></BackgroundImage>
+        </HeaderStyle>
+        <FilterAreaStyle>
+            <BackgroundImage Repeat="RepeatX" ImageUrl="~/App_Themes/Glass/PivotGrid/pgFilterAreaBack.gif"></BackgroundImage>
+        </FilterAreaStyle>   
+        <FilterButtonPanelStyle>
+            <BackgroundImage Repeat="RepeatX" ImageUrl="~/App_Themes/Glass/PivotGrid/pgFilterPanelBack.gif"></BackgroundImage>
+        </FilterButtonPanelStyle>   
+        <MenuStyle GutterWidth="0px"></MenuStyle>
+    </Styles>
+</dxwpg:ASPxPivotGrid>
