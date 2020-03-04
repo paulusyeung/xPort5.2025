@@ -28,9 +28,7 @@ namespace xPort5.Admin.Coding.Terms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Gizmox.WebGUI.Common.Resources.IconResourceHandle iconResourceHandle1 = new Gizmox.WebGUI.Common.Resources.IconResourceHandle();
-            Gizmox.WebGUI.Common.Resources.IconResourceHandle iconResourceHandle2 = new Gizmox.WebGUI.Common.Resources.IconResourceHandle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TermsRecord));
             this.ansToolbar = new Gizmox.WebGUI.Forms.ToolBar();
             this.wspBackground = new Gizmox.WebGUI.Forms.Panel();
             this.rbtnReceipts = new Gizmox.WebGUI.Forms.RadioButton();
@@ -55,31 +53,30 @@ namespace xPort5.Admin.Coding.Terms
             this.lblName = new Gizmox.WebGUI.Forms.Label();
             this.txtCode = new Gizmox.WebGUI.Forms.TextBox();
             this.lblCode = new Gizmox.WebGUI.Forms.Label();
-            this.colDept = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colClass = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colCategory = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colCategoryId = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.toolTip1 = new Gizmox.WebGUI.Forms.ToolTip(this.components);
+            this.colDept = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colClass = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colCategory = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colCategoryId = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.toolTip1 = new Gizmox.WebGUI.Forms.ToolTip();
+            this.wspBackground.SuspendLayout();
+            this.boxLogs.SuspendLayout();
             this.SuspendLayout();
             // 
             // ansToolbar
             // 
-            this.ansToolbar.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
-            this.ansToolbar.Appearance = Gizmox.WebGUI.Forms.ToolBarAppearance.Normal;
-            this.ansToolbar.Dock = Gizmox.WebGUI.Forms.DockStyle.Top;
             this.ansToolbar.DragHandle = true;
-            this.ansToolbar.DropDownArrows = false;
-            this.ansToolbar.ImageList = null;
+            this.ansToolbar.DropDownArrows = true;
+            this.ansToolbar.ImageSize = new System.Drawing.Size(16, 16);
             this.ansToolbar.Location = new System.Drawing.Point(0, 0);
             this.ansToolbar.MenuHandle = true;
             this.ansToolbar.Name = "ansToolbar";
             this.ansToolbar.RightToLeft = Gizmox.WebGUI.Forms.RightToLeft.No;
             this.ansToolbar.ShowToolTips = true;
+            this.ansToolbar.Size = new System.Drawing.Size(100, 22);
             this.ansToolbar.TabIndex = 0;
             // 
             // wspBackground
             // 
-            this.wspBackground.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
             this.wspBackground.Controls.Add(this.rbtnReceipts);
             this.wspBackground.Controls.Add(this.rbtnPayment);
             this.wspBackground.Controls.Add(this.lblType);
@@ -98,12 +95,13 @@ namespace xPort5.Admin.Coding.Terms
             this.wspBackground.DockPadding.All = 6;
             this.wspBackground.Location = new System.Drawing.Point(0, 28);
             this.wspBackground.Name = "wspBackground";
+            this.wspBackground.Padding = new Gizmox.WebGUI.Forms.Padding(6);
             this.wspBackground.Size = new System.Drawing.Size(627, 141);
             this.wspBackground.TabIndex = 1;
             // 
             // rbtnReceipts
             // 
-            this.rbtnReceipts.Location = new System.Drawing.Point(235, 32);
+            this.rbtnReceipts.Location = new System.Drawing.Point(264, 32);
             this.rbtnReceipts.Name = "rbtnReceipts";
             this.rbtnReceipts.Size = new System.Drawing.Size(104, 24);
             this.rbtnReceipts.TabIndex = 14;
@@ -112,7 +110,7 @@ namespace xPort5.Admin.Coding.Terms
             // 
             // rbtnPayment
             // 
-            this.rbtnPayment.Location = new System.Drawing.Point(125, 32);
+            this.rbtnPayment.Location = new System.Drawing.Point(154, 32);
             this.rbtnPayment.Name = "rbtnPayment";
             this.rbtnPayment.Size = new System.Drawing.Size(104, 24);
             this.rbtnPayment.TabIndex = 13;
@@ -129,9 +127,8 @@ namespace xPort5.Admin.Coding.Terms
             // 
             // cmdConvertToCht
             // 
-            iconResourceHandle1.File = "16x16.lightning.png";
-            this.cmdConvertToCht.Image = iconResourceHandle1;
-            this.cmdConvertToCht.Location = new System.Drawing.Point(95, 108);
+            this.cmdConvertToCht.Image = new Gizmox.WebGUI.Common.Resources.IconResourceHandle(resources.GetString("cmdConvertToCht.Image"));
+            this.cmdConvertToCht.Location = new System.Drawing.Point(124, 108);
             this.cmdConvertToCht.Name = "cmdConvertToCht";
             this.cmdConvertToCht.Size = new System.Drawing.Size(24, 23);
             this.cmdConvertToCht.TabIndex = 10;
@@ -141,9 +138,8 @@ namespace xPort5.Admin.Coding.Terms
             // 
             // cmdConvertToChs
             // 
-            iconResourceHandle2.File = "16x16.lightning.png";
-            this.cmdConvertToChs.Image = iconResourceHandle2;
-            this.cmdConvertToChs.Location = new System.Drawing.Point(95, 83);
+            this.cmdConvertToChs.Image = new Gizmox.WebGUI.Common.Resources.IconResourceHandle(resources.GetString("cmdConvertToChs.Image"));
+            this.cmdConvertToChs.Location = new System.Drawing.Point(124, 83);
             this.cmdConvertToChs.Name = "cmdConvertToChs";
             this.cmdConvertToChs.Size = new System.Drawing.Size(24, 23);
             this.cmdConvertToChs.TabIndex = 7;
@@ -166,6 +162,7 @@ namespace xPort5.Admin.Coding.Terms
             this.boxLogs.Name = "boxLogs";
             this.boxLogs.Size = new System.Drawing.Size(214, 106);
             this.boxLogs.TabIndex = 12;
+            this.boxLogs.TabStop = false;
             this.boxLogs.Text = "Logs";
             this.boxLogs.Visible = false;
             // 
@@ -235,9 +232,9 @@ namespace xPort5.Admin.Coding.Terms
             // 
             // txtName_Cht
             // 
-            this.txtName_Cht.Location = new System.Drawing.Point(125, 110);
+            this.txtName_Cht.Location = new System.Drawing.Point(149, 110);
             this.txtName_Cht.Name = "txtName_Cht";
-            this.txtName_Cht.Size = new System.Drawing.Size(270, 20);
+            this.txtName_Cht.Size = new System.Drawing.Size(246, 20);
             this.txtName_Cht.TabIndex = 11;
             // 
             // lblName_Cht
@@ -250,10 +247,10 @@ namespace xPort5.Admin.Coding.Terms
             // 
             // txtName_Chs
             // 
-            this.txtName_Chs.Location = new System.Drawing.Point(125, 84);
+            this.txtName_Chs.Location = new System.Drawing.Point(149, 84);
             this.txtName_Chs.Name = "txtName_Chs";
             this.txtName_Chs.ScrollBars = Gizmox.WebGUI.Forms.ScrollBars.Vertical;
-            this.txtName_Chs.Size = new System.Drawing.Size(270, 20);
+            this.txtName_Chs.Size = new System.Drawing.Size(246, 20);
             this.txtName_Chs.TabIndex = 8;
             // 
             // lblName_Chs
@@ -266,9 +263,9 @@ namespace xPort5.Admin.Coding.Terms
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(125, 59);
+            this.txtName.Location = new System.Drawing.Point(149, 59);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(270, 20);
+            this.txtName.Size = new System.Drawing.Size(246, 20);
             this.txtName.TabIndex = 5;
             // 
             // lblName
@@ -281,9 +278,9 @@ namespace xPort5.Admin.Coding.Terms
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(125, 6);
+            this.txtCode.Location = new System.Drawing.Point(149, 6);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(270, 20);
+            this.txtCode.Size = new System.Drawing.Size(246, 20);
             this.txtCode.TabIndex = 1;
             // 
             // lblCode
@@ -297,27 +294,23 @@ namespace xPort5.Admin.Coding.Terms
             // colDept
             // 
             this.colDept.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
-            this.colDept.Image = null;
             this.colDept.Text = "Department";
             this.colDept.Width = 100;
             // 
             // colClass
             // 
             this.colClass.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
-            this.colClass.Image = null;
             this.colClass.Text = "Class";
             this.colClass.Width = 100;
             // 
             // colCategory
             // 
             this.colCategory.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
-            this.colCategory.Image = null;
             this.colCategory.Text = "Cateogry";
             this.colCategory.Width = 100;
             // 
             // colCategoryId
             // 
-            this.colCategoryId.Image = null;
             this.colCategoryId.Text = "Category Id";
             this.colCategoryId.Visible = false;
             this.colCategoryId.Width = 150;
@@ -332,6 +325,8 @@ namespace xPort5.Admin.Coding.Terms
             this.StartPosition = Gizmox.WebGUI.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payment Terms Record";
             this.Load += new System.EventHandler(this.Form_Load);
+            this.wspBackground.ResumeLayout(false);
+            this.boxLogs.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

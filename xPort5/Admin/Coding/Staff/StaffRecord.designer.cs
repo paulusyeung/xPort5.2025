@@ -28,8 +28,7 @@ namespace xPort5.Admin.Coding.Staff
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Gizmox.WebGUI.Common.Resources.IconResourceHandle iconResourceHandle1 = new Gizmox.WebGUI.Common.Resources.IconResourceHandle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffRecord));
             this.ansToolbar = new Gizmox.WebGUI.Forms.ToolBar();
             this.wspClientRecord = new Gizmox.WebGUI.Forms.Panel();
             this.cmdSmartUserCode = new Gizmox.WebGUI.Forms.Button();
@@ -64,27 +63,28 @@ namespace xPort5.Admin.Coding.Staff
             this.lblLogin = new Gizmox.WebGUI.Forms.Label();
             this.txtFirstName = new Gizmox.WebGUI.Forms.TextBox();
             this.lblFirstName = new Gizmox.WebGUI.Forms.Label();
-            this.toolTip1 = new Gizmox.WebGUI.Forms.ToolTip(this.components);
+            this.toolTip1 = new Gizmox.WebGUI.Forms.ToolTip();
+            this.wspClientRecord.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabUser)).BeginInit();
+            this.tabUser.SuspendLayout();
+            this.boxLogs.SuspendLayout();
             this.SuspendLayout();
             // 
             // ansToolbar
             // 
-            this.ansToolbar.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
-            this.ansToolbar.Appearance = Gizmox.WebGUI.Forms.ToolBarAppearance.Normal;
-            this.ansToolbar.Dock = Gizmox.WebGUI.Forms.DockStyle.Top;
             this.ansToolbar.DragHandle = true;
-            this.ansToolbar.DropDownArrows = false;
-            this.ansToolbar.ImageList = null;
+            this.ansToolbar.DropDownArrows = true;
+            this.ansToolbar.ImageSize = new System.Drawing.Size(16, 16);
             this.ansToolbar.Location = new System.Drawing.Point(0, 0);
             this.ansToolbar.MenuHandle = true;
             this.ansToolbar.Name = "ansToolbar";
             this.ansToolbar.RightToLeft = Gizmox.WebGUI.Forms.RightToLeft.No;
             this.ansToolbar.ShowToolTips = true;
+            this.ansToolbar.Size = new System.Drawing.Size(100, 22);
             this.ansToolbar.TabIndex = 0;
             // 
             // wspClientRecord
             // 
-            this.wspClientRecord.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
             this.wspClientRecord.Controls.Add(this.cmdSmartUserCode);
             this.wspClientRecord.Controls.Add(this.tabUser);
             this.wspClientRecord.Controls.Add(this.boxLogs);
@@ -112,13 +112,13 @@ namespace xPort5.Admin.Coding.Staff
             this.wspClientRecord.DockPadding.All = 6;
             this.wspClientRecord.Location = new System.Drawing.Point(0, 28);
             this.wspClientRecord.Name = "wspClientRecord";
+            this.wspClientRecord.Padding = new Gizmox.WebGUI.Forms.Padding(6);
             this.wspClientRecord.Size = new System.Drawing.Size(629, 466);
             this.wspClientRecord.TabIndex = 1;
             // 
             // cmdSmartUserCode
             // 
-            iconResourceHandle1.File = "16x16.lightbulb.png";
-            this.cmdSmartUserCode.Image = iconResourceHandle1;
+            this.cmdSmartUserCode.Image = new Gizmox.WebGUI.Common.Resources.IconResourceHandle(resources.GetString("cmdSmartUserCode.Image"));
             this.cmdSmartUserCode.Location = new System.Drawing.Point(376, 5);
             this.cmdSmartUserCode.Name = "cmdSmartUserCode";
             this.cmdSmartUserCode.Size = new System.Drawing.Size(24, 23);
@@ -129,11 +129,9 @@ namespace xPort5.Admin.Coding.Staff
             // 
             // tabUser
             // 
-            this.tabUser.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
             this.tabUser.Controls.Add(this.tabAddress);
             this.tabUser.Dock = Gizmox.WebGUI.Forms.DockStyle.Bottom;
             this.tabUser.Location = new System.Drawing.Point(6, 310);
-            this.tabUser.Multiline = false;
             this.tabUser.Name = "tabUser";
             this.tabUser.SelectedIndex = 0;
             this.tabUser.Size = new System.Drawing.Size(617, 150);
@@ -141,6 +139,7 @@ namespace xPort5.Admin.Coding.Staff
             // 
             // tabAddress
             // 
+            this.tabAddress.Dock = Gizmox.WebGUI.Forms.DockStyle.Fill;
             this.tabAddress.Location = new System.Drawing.Point(4, 22);
             this.tabAddress.Name = "tabAddress";
             this.tabAddress.Size = new System.Drawing.Size(609, 124);
@@ -162,6 +161,7 @@ namespace xPort5.Admin.Coding.Staff
             this.boxLogs.Name = "boxLogs";
             this.boxLogs.Size = new System.Drawing.Size(214, 106);
             this.boxLogs.TabIndex = 22;
+            this.boxLogs.TabStop = false;
             this.boxLogs.Text = "Logs";
             this.boxLogs.Visible = false;
             // 
@@ -312,7 +312,7 @@ namespace xPort5.Admin.Coding.Staff
             // 
             this.txtUserCode.Location = new System.Drawing.Point(100, 6);
             this.txtUserCode.Name = "txtUserCode";
-            this.txtUserCode.Size = new System.Drawing.Size(300, 20);
+            this.txtUserCode.Size = new System.Drawing.Size(254, 20);
             this.txtUserCode.TabIndex = 1;
             // 
             // lblUserCode
@@ -385,7 +385,7 @@ namespace xPort5.Admin.Coding.Staff
             this.lblFirstName.TabIndex = 3;
             this.lblFirstName.Text = "First Name:";
             // 
-            // UserRecord
+            // StaffRecord
             // 
             this.Controls.Add(this.wspClientRecord);
             this.Controls.Add(this.ansToolbar);
@@ -394,6 +394,10 @@ namespace xPort5.Admin.Coding.Staff
             this.Size = new System.Drawing.Size(629, 494);
             this.StartPosition = Gizmox.WebGUI.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Record";
+            this.wspClientRecord.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tabUser)).EndInit();
+            this.tabUser.ResumeLayout(false);
+            this.boxLogs.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -28,10 +28,7 @@ namespace xPort5.Admin.Coding.Category
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Gizmox.WebGUI.Common.Resources.IconResourceHandle iconResourceHandle1 = new Gizmox.WebGUI.Common.Resources.IconResourceHandle();
-            Gizmox.WebGUI.Common.Resources.IconResourceHandle iconResourceHandle2 = new Gizmox.WebGUI.Common.Resources.IconResourceHandle();
-            Gizmox.WebGUI.Common.Resources.IconResourceHandle iconResourceHandle3 = new Gizmox.WebGUI.Common.Resources.IconResourceHandle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoryRecord));
             this.ansToolbar = new Gizmox.WebGUI.Forms.ToolBar();
             this.wspBackground = new Gizmox.WebGUI.Forms.Panel();
             this.cmdNextCategoryCode = new Gizmox.WebGUI.Forms.Button();
@@ -58,31 +55,30 @@ namespace xPort5.Admin.Coding.Category
             this.lblName = new Gizmox.WebGUI.Forms.Label();
             this.txtCode = new Gizmox.WebGUI.Forms.TextBox();
             this.lblCode = new Gizmox.WebGUI.Forms.Label();
-            this.colDept = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colClass = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colCategory = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colCategoryId = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.toolTip1 = new Gizmox.WebGUI.Forms.ToolTip(this.components);
+            this.colDept = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colClass = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colCategory = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colCategoryId = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.toolTip1 = new Gizmox.WebGUI.Forms.ToolTip();
+            this.wspBackground.SuspendLayout();
+            this.boxLogs.SuspendLayout();
             this.SuspendLayout();
             // 
             // ansToolbar
             // 
-            this.ansToolbar.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
-            this.ansToolbar.Appearance = Gizmox.WebGUI.Forms.ToolBarAppearance.Normal;
-            this.ansToolbar.Dock = Gizmox.WebGUI.Forms.DockStyle.Top;
             this.ansToolbar.DragHandle = true;
-            this.ansToolbar.DropDownArrows = false;
-            this.ansToolbar.ImageList = null;
+            this.ansToolbar.DropDownArrows = true;
+            this.ansToolbar.ImageSize = new System.Drawing.Size(16, 16);
             this.ansToolbar.Location = new System.Drawing.Point(0, 0);
             this.ansToolbar.MenuHandle = true;
             this.ansToolbar.Name = "ansToolbar";
             this.ansToolbar.RightToLeft = Gizmox.WebGUI.Forms.RightToLeft.No;
             this.ansToolbar.ShowToolTips = true;
+            this.ansToolbar.Size = new System.Drawing.Size(100, 22);
             this.ansToolbar.TabIndex = 0;
             // 
             // wspBackground
             // 
-            this.wspBackground.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
             this.wspBackground.Controls.Add(this.cmdNextCategoryCode);
             this.wspBackground.Controls.Add(this.cboClass);
             this.wspBackground.Controls.Add(this.cboDept);
@@ -103,14 +99,14 @@ namespace xPort5.Admin.Coding.Category
             this.wspBackground.DockPadding.All = 6;
             this.wspBackground.Location = new System.Drawing.Point(0, 28);
             this.wspBackground.Name = "wspBackground";
+            this.wspBackground.Padding = new Gizmox.WebGUI.Forms.Padding(6);
             this.wspBackground.Size = new System.Drawing.Size(627, 186);
             this.wspBackground.TabIndex = 1;
             // 
             // cmdNextCategoryCode
             // 
-            iconResourceHandle1.File = "16x16.lightning.png";
-            this.cmdNextCategoryCode.Image = iconResourceHandle1;
-            this.cmdNextCategoryCode.Location = new System.Drawing.Point(95, 6);
+            this.cmdNextCategoryCode.Image = new Gizmox.WebGUI.Common.Resources.IconResourceHandle(resources.GetString("cmdNextCategoryCode.Image"));
+            this.cmdNextCategoryCode.Location = new System.Drawing.Point(122, 6);
             this.cmdNextCategoryCode.Name = "cmdNextCategoryCode";
             this.cmdNextCategoryCode.Size = new System.Drawing.Size(24, 23);
             this.cmdNextCategoryCode.TabIndex = 12;
@@ -121,18 +117,18 @@ namespace xPort5.Admin.Coding.Category
             // cboClass
             // 
             this.cboClass.DropDownStyle = Gizmox.WebGUI.Forms.ComboBoxStyle.DropDownList;
-            this.cboClass.Location = new System.Drawing.Point(125, 136);
+            this.cboClass.Location = new System.Drawing.Point(148, 136);
             this.cboClass.Name = "cboClass";
-            this.cboClass.Size = new System.Drawing.Size(270, 21);
+            this.cboClass.Size = new System.Drawing.Size(247, 21);
             this.cboClass.TabIndex = 5;
             this.cboClass.Visible = false;
             // 
             // cboDept
             // 
             this.cboDept.DropDownStyle = Gizmox.WebGUI.Forms.ComboBoxStyle.DropDownList;
-            this.cboDept.Location = new System.Drawing.Point(125, 109);
+            this.cboDept.Location = new System.Drawing.Point(148, 109);
             this.cboDept.Name = "cboDept";
-            this.cboDept.Size = new System.Drawing.Size(270, 21);
+            this.cboDept.Size = new System.Drawing.Size(247, 21);
             this.cboDept.TabIndex = 3;
             this.cboDept.Visible = false;
             // 
@@ -156,9 +152,8 @@ namespace xPort5.Admin.Coding.Category
             // 
             // cmdConvertToCht
             // 
-            iconResourceHandle2.File = "16x16.lightning.png";
-            this.cmdConvertToCht.Image = iconResourceHandle2;
-            this.cmdConvertToCht.Location = new System.Drawing.Point(95, 83);
+            this.cmdConvertToCht.Image = new Gizmox.WebGUI.Common.Resources.IconResourceHandle(resources.GetString("cmdConvertToCht.Image"));
+            this.cmdConvertToCht.Location = new System.Drawing.Point(122, 83);
             this.cmdConvertToCht.Name = "cmdConvertToCht";
             this.cmdConvertToCht.Size = new System.Drawing.Size(24, 23);
             this.cmdConvertToCht.TabIndex = 12;
@@ -168,9 +163,8 @@ namespace xPort5.Admin.Coding.Category
             // 
             // cmdConvertToChs
             // 
-            iconResourceHandle3.File = "16x16.lightning.png";
-            this.cmdConvertToChs.Image = iconResourceHandle3;
-            this.cmdConvertToChs.Location = new System.Drawing.Point(95, 56);
+            this.cmdConvertToChs.Image = new Gizmox.WebGUI.Common.Resources.IconResourceHandle(resources.GetString("cmdConvertToChs.Image"));
+            this.cmdConvertToChs.Location = new System.Drawing.Point(122, 56);
             this.cmdConvertToChs.Name = "cmdConvertToChs";
             this.cmdConvertToChs.Size = new System.Drawing.Size(24, 23);
             this.cmdConvertToChs.TabIndex = 9;
@@ -193,6 +187,7 @@ namespace xPort5.Admin.Coding.Category
             this.boxLogs.Name = "boxLogs";
             this.boxLogs.Size = new System.Drawing.Size(214, 106);
             this.boxLogs.TabIndex = 16;
+            this.boxLogs.TabStop = false;
             this.boxLogs.Text = "Logs";
             this.boxLogs.Visible = false;
             // 
@@ -262,9 +257,9 @@ namespace xPort5.Admin.Coding.Category
             // 
             // txtName_Cht
             // 
-            this.txtName_Cht.Location = new System.Drawing.Point(125, 83);
+            this.txtName_Cht.Location = new System.Drawing.Point(148, 83);
             this.txtName_Cht.Name = "txtName_Cht";
-            this.txtName_Cht.Size = new System.Drawing.Size(270, 20);
+            this.txtName_Cht.Size = new System.Drawing.Size(247, 20);
             this.txtName_Cht.TabIndex = 13;
             // 
             // lblName_Cht
@@ -277,10 +272,10 @@ namespace xPort5.Admin.Coding.Category
             // 
             // txtName_Chs
             // 
-            this.txtName_Chs.Location = new System.Drawing.Point(125, 57);
+            this.txtName_Chs.Location = new System.Drawing.Point(148, 57);
             this.txtName_Chs.Name = "txtName_Chs";
             this.txtName_Chs.ScrollBars = Gizmox.WebGUI.Forms.ScrollBars.Vertical;
-            this.txtName_Chs.Size = new System.Drawing.Size(270, 20);
+            this.txtName_Chs.Size = new System.Drawing.Size(247, 20);
             this.txtName_Chs.TabIndex = 10;
             // 
             // lblName_Chs
@@ -293,9 +288,9 @@ namespace xPort5.Admin.Coding.Category
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(125, 32);
+            this.txtName.Location = new System.Drawing.Point(148, 32);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(270, 20);
+            this.txtName.Size = new System.Drawing.Size(247, 20);
             this.txtName.TabIndex = 7;
             // 
             // lblName
@@ -308,9 +303,9 @@ namespace xPort5.Admin.Coding.Category
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(125, 6);
+            this.txtCode.Location = new System.Drawing.Point(148, 6);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(270, 20);
+            this.txtCode.Size = new System.Drawing.Size(247, 20);
             this.txtCode.TabIndex = 1;
             // 
             // lblCode
@@ -324,27 +319,23 @@ namespace xPort5.Admin.Coding.Category
             // colDept
             // 
             this.colDept.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
-            this.colDept.Image = null;
             this.colDept.Text = "Department";
             this.colDept.Width = 100;
             // 
             // colClass
             // 
             this.colClass.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
-            this.colClass.Image = null;
             this.colClass.Text = "Class";
             this.colClass.Width = 100;
             // 
             // colCategory
             // 
             this.colCategory.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
-            this.colCategory.Image = null;
             this.colCategory.Text = "Cateogry";
             this.colCategory.Width = 100;
             // 
             // colCategoryId
             // 
-            this.colCategoryId.Image = null;
             this.colCategoryId.Text = "Category Id";
             this.colCategoryId.Visible = false;
             this.colCategoryId.Width = 150;
@@ -359,6 +350,8 @@ namespace xPort5.Admin.Coding.Category
             this.StartPosition = Gizmox.WebGUI.Forms.FormStartPosition.CenterScreen;
             this.Text = "Category Record";
             this.Load += new System.EventHandler(this.SupplierRecord_Load);
+            this.wspBackground.ResumeLayout(false);
+            this.boxLogs.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

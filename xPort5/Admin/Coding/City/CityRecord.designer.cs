@@ -28,11 +28,15 @@ namespace xPort5.Admin.Coding.City
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Gizmox.WebGUI.Common.Resources.IconResourceHandle iconResourceHandle3 = new Gizmox.WebGUI.Common.Resources.IconResourceHandle();
-            Gizmox.WebGUI.Common.Resources.IconResourceHandle iconResourceHandle4 = new Gizmox.WebGUI.Common.Resources.IconResourceHandle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CityRecord));
             this.ansToolbar = new Gizmox.WebGUI.Forms.ToolBar();
             this.wspBackground = new Gizmox.WebGUI.Forms.Panel();
+            this.txtPhoneCode = new Gizmox.WebGUI.Forms.TextBox();
+            this.lblPhoneCode = new Gizmox.WebGUI.Forms.Label();
+            this.cboProvince = new Gizmox.WebGUI.Forms.ComboBox();
+            this.cboCountry = new Gizmox.WebGUI.Forms.ComboBox();
+            this.lblProvince = new Gizmox.WebGUI.Forms.Label();
+            this.lblCountry = new Gizmox.WebGUI.Forms.Label();
             this.cmdConvertToCht = new Gizmox.WebGUI.Forms.Button();
             this.cmdConvertToChs = new Gizmox.WebGUI.Forms.Button();
             this.boxLogs = new Gizmox.WebGUI.Forms.GroupBox();
@@ -52,37 +56,30 @@ namespace xPort5.Admin.Coding.City
             this.lblName = new Gizmox.WebGUI.Forms.Label();
             this.txtCode = new Gizmox.WebGUI.Forms.TextBox();
             this.lblCode = new Gizmox.WebGUI.Forms.Label();
-            this.colDept = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colClass = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colCategory = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colCategoryId = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.toolTip1 = new Gizmox.WebGUI.Forms.ToolTip(this.components);
-            this.lblCountry = new Gizmox.WebGUI.Forms.Label();
-            this.lblProvince = new Gizmox.WebGUI.Forms.Label();
-            this.cboCountry = new Gizmox.WebGUI.Forms.ComboBox();
-            this.cboProvince = new Gizmox.WebGUI.Forms.ComboBox();
-            this.lblPhoneCode = new Gizmox.WebGUI.Forms.Label();
-            this.txtPhoneCode = new Gizmox.WebGUI.Forms.TextBox();
+            this.colDept = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colClass = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colCategory = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colCategoryId = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.toolTip1 = new Gizmox.WebGUI.Forms.ToolTip();
+            this.wspBackground.SuspendLayout();
+            this.boxLogs.SuspendLayout();
             this.SuspendLayout();
             // 
             // ansToolbar
             // 
-            this.ansToolbar.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
-            this.ansToolbar.Appearance = Gizmox.WebGUI.Forms.ToolBarAppearance.Normal;
-            this.ansToolbar.Dock = Gizmox.WebGUI.Forms.DockStyle.Top;
             this.ansToolbar.DragHandle = true;
-            this.ansToolbar.DropDownArrows = false;
-            this.ansToolbar.ImageList = null;
+            this.ansToolbar.DropDownArrows = true;
+            this.ansToolbar.ImageSize = new System.Drawing.Size(16, 16);
             this.ansToolbar.Location = new System.Drawing.Point(0, 0);
             this.ansToolbar.MenuHandle = true;
             this.ansToolbar.Name = "ansToolbar";
             this.ansToolbar.RightToLeft = Gizmox.WebGUI.Forms.RightToLeft.No;
             this.ansToolbar.ShowToolTips = true;
+            this.ansToolbar.Size = new System.Drawing.Size(100, 22);
             this.ansToolbar.TabIndex = 0;
             // 
             // wspBackground
             // 
-            this.wspBackground.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
             this.wspBackground.Controls.Add(this.txtPhoneCode);
             this.wspBackground.Controls.Add(this.lblPhoneCode);
             this.wspBackground.Controls.Add(this.cboProvince);
@@ -104,14 +101,63 @@ namespace xPort5.Admin.Coding.City
             this.wspBackground.DockPadding.All = 6;
             this.wspBackground.Location = new System.Drawing.Point(0, 28);
             this.wspBackground.Name = "wspBackground";
+            this.wspBackground.Padding = new Gizmox.WebGUI.Forms.Padding(6);
             this.wspBackground.Size = new System.Drawing.Size(627, 207);
             this.wspBackground.TabIndex = 1;
             // 
+            // txtPhoneCode
+            // 
+            this.txtPhoneCode.Location = new System.Drawing.Point(144, 161);
+            this.txtPhoneCode.Name = "txtPhoneCode";
+            this.txtPhoneCode.Size = new System.Drawing.Size(251, 20);
+            this.txtPhoneCode.TabIndex = 15;
+            // 
+            // lblPhoneCode
+            // 
+            this.lblPhoneCode.Location = new System.Drawing.Point(6, 161);
+            this.lblPhoneCode.Name = "lblPhoneCode";
+            this.lblPhoneCode.Size = new System.Drawing.Size(112, 21);
+            this.lblPhoneCode.TabIndex = 14;
+            this.lblPhoneCode.Text = "Area Code:";
+            // 
+            // cboProvince
+            // 
+            this.cboProvince.BorderStyle = Gizmox.WebGUI.Forms.BorderStyle.Fixed3D;
+            this.cboProvince.DropDownStyle = Gizmox.WebGUI.Forms.ComboBoxStyle.DropDownList;
+            this.cboProvince.Location = new System.Drawing.Point(144, 58);
+            this.cboProvince.Name = "cboProvince";
+            this.cboProvince.Size = new System.Drawing.Size(251, 21);
+            this.cboProvince.TabIndex = 5;
+            // 
+            // cboCountry
+            // 
+            this.cboCountry.BorderStyle = Gizmox.WebGUI.Forms.BorderStyle.Fixed3D;
+            this.cboCountry.DropDownStyle = Gizmox.WebGUI.Forms.ComboBoxStyle.DropDownList;
+            this.cboCountry.Location = new System.Drawing.Point(144, 31);
+            this.cboCountry.Name = "cboCountry";
+            this.cboCountry.Size = new System.Drawing.Size(251, 21);
+            this.cboCountry.TabIndex = 3;
+            // 
+            // lblProvince
+            // 
+            this.lblProvince.Location = new System.Drawing.Point(6, 58);
+            this.lblProvince.Name = "lblProvince";
+            this.lblProvince.Size = new System.Drawing.Size(112, 21);
+            this.lblProvince.TabIndex = 4;
+            this.lblProvince.Text = "Province:";
+            // 
+            // lblCountry
+            // 
+            this.lblCountry.Location = new System.Drawing.Point(6, 31);
+            this.lblCountry.Name = "lblCountry";
+            this.lblCountry.Size = new System.Drawing.Size(112, 21);
+            this.lblCountry.TabIndex = 2;
+            this.lblCountry.Text = "Country:";
+            // 
             // cmdConvertToCht
             // 
-            iconResourceHandle3.File = "16x16.lightning.png";
-            this.cmdConvertToCht.Image = iconResourceHandle3;
-            this.cmdConvertToCht.Location = new System.Drawing.Point(72, 134);
+            this.cmdConvertToCht.Image = new Gizmox.WebGUI.Common.Resources.IconResourceHandle(resources.GetString("cmdConvertToCht.Image"));
+            this.cmdConvertToCht.Location = new System.Drawing.Point(118, 134);
             this.cmdConvertToCht.Name = "cmdConvertToCht";
             this.cmdConvertToCht.Size = new System.Drawing.Size(24, 23);
             this.cmdConvertToCht.TabIndex = 12;
@@ -121,9 +167,8 @@ namespace xPort5.Admin.Coding.City
             // 
             // cmdConvertToChs
             // 
-            iconResourceHandle4.File = "16x16.lightning.png";
-            this.cmdConvertToChs.Image = iconResourceHandle4;
-            this.cmdConvertToChs.Location = new System.Drawing.Point(72, 109);
+            this.cmdConvertToChs.Image = new Gizmox.WebGUI.Common.Resources.IconResourceHandle(resources.GetString("cmdConvertToChs.Image"));
+            this.cmdConvertToChs.Location = new System.Drawing.Point(118, 109);
             this.cmdConvertToChs.Name = "cmdConvertToChs";
             this.cmdConvertToChs.Size = new System.Drawing.Size(24, 23);
             this.cmdConvertToChs.TabIndex = 9;
@@ -146,6 +191,7 @@ namespace xPort5.Admin.Coding.City
             this.boxLogs.Name = "boxLogs";
             this.boxLogs.Size = new System.Drawing.Size(214, 106);
             this.boxLogs.TabIndex = 16;
+            this.boxLogs.TabStop = false;
             this.boxLogs.Text = "Logs";
             this.boxLogs.Visible = false;
             // 
@@ -215,141 +261,88 @@ namespace xPort5.Admin.Coding.City
             // 
             // txtName_Cht
             // 
-            this.txtName_Cht.Location = new System.Drawing.Point(98, 136);
+            this.txtName_Cht.Location = new System.Drawing.Point(144, 136);
             this.txtName_Cht.Name = "txtName_Cht";
-            this.txtName_Cht.Size = new System.Drawing.Size(297, 20);
+            this.txtName_Cht.Size = new System.Drawing.Size(251, 20);
             this.txtName_Cht.TabIndex = 13;
             // 
             // lblName_Cht
             // 
             this.lblName_Cht.Location = new System.Drawing.Point(6, 136);
             this.lblName_Cht.Name = "lblName_Cht";
-            this.lblName_Cht.Size = new System.Drawing.Size(90, 21);
+            this.lblName_Cht.Size = new System.Drawing.Size(112, 21);
             this.lblName_Cht.TabIndex = 11;
             this.lblName_Cht.Text = "Name (Cht):";
             // 
             // txtName_Chs
             // 
-            this.txtName_Chs.Location = new System.Drawing.Point(98, 110);
+            this.txtName_Chs.Location = new System.Drawing.Point(144, 110);
             this.txtName_Chs.Name = "txtName_Chs";
             this.txtName_Chs.ScrollBars = Gizmox.WebGUI.Forms.ScrollBars.Vertical;
-            this.txtName_Chs.Size = new System.Drawing.Size(297, 20);
+            this.txtName_Chs.Size = new System.Drawing.Size(251, 20);
             this.txtName_Chs.TabIndex = 10;
             // 
             // lblName_Chs
             // 
             this.lblName_Chs.Location = new System.Drawing.Point(6, 110);
             this.lblName_Chs.Name = "lblName_Chs";
-            this.lblName_Chs.Size = new System.Drawing.Size(90, 21);
+            this.lblName_Chs.Size = new System.Drawing.Size(112, 21);
             this.lblName_Chs.TabIndex = 8;
             this.lblName_Chs.Text = "Name (Chs):";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(98, 85);
+            this.txtName.Location = new System.Drawing.Point(144, 85);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(297, 20);
+            this.txtName.Size = new System.Drawing.Size(251, 20);
             this.txtName.TabIndex = 7;
             // 
             // lblName
             // 
             this.lblName.Location = new System.Drawing.Point(6, 85);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(90, 21);
+            this.lblName.Size = new System.Drawing.Size(112, 21);
             this.lblName.TabIndex = 6;
             this.lblName.Text = "Name:";
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(98, 6);
+            this.txtCode.Location = new System.Drawing.Point(144, 6);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(297, 20);
+            this.txtCode.Size = new System.Drawing.Size(251, 20);
             this.txtCode.TabIndex = 1;
             // 
             // lblCode
             // 
             this.lblCode.Location = new System.Drawing.Point(6, 6);
             this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(90, 21);
+            this.lblCode.Size = new System.Drawing.Size(112, 21);
             this.lblCode.TabIndex = 0;
             this.lblCode.Text = "Code:";
             // 
             // colDept
             // 
             this.colDept.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
-            this.colDept.Image = null;
             this.colDept.Text = "Department";
             this.colDept.Width = 100;
             // 
             // colClass
             // 
             this.colClass.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
-            this.colClass.Image = null;
             this.colClass.Text = "Class";
             this.colClass.Width = 100;
             // 
             // colCategory
             // 
             this.colCategory.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
-            this.colCategory.Image = null;
             this.colCategory.Text = "Cateogry";
             this.colCategory.Width = 100;
             // 
             // colCategoryId
             // 
-            this.colCategoryId.Image = null;
             this.colCategoryId.Text = "Category Id";
             this.colCategoryId.Visible = false;
             this.colCategoryId.Width = 150;
-            // 
-            // lblCountry
-            // 
-            this.lblCountry.Location = new System.Drawing.Point(6, 31);
-            this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(90, 21);
-            this.lblCountry.TabIndex = 2;
-            this.lblCountry.Text = "Country:";
-            // 
-            // lblProvince
-            // 
-            this.lblProvince.Location = new System.Drawing.Point(6, 58);
-            this.lblProvince.Name = "lblProvince";
-            this.lblProvince.Size = new System.Drawing.Size(90, 21);
-            this.lblProvince.TabIndex = 4;
-            this.lblProvince.Text = "Province:";
-            // 
-            // cboCountry
-            // 
-            this.cboCountry.BorderStyle = Gizmox.WebGUI.Forms.BorderStyle.Fixed3D;
-            this.cboCountry.DropDownStyle = Gizmox.WebGUI.Forms.ComboBoxStyle.DropDownList;
-            this.cboCountry.Location = new System.Drawing.Point(98, 31);
-            this.cboCountry.Name = "cboCountry";
-            this.cboCountry.Size = new System.Drawing.Size(297, 21);
-            this.cboCountry.TabIndex = 3;
-            // 
-            // cboProvince
-            // 
-            this.cboProvince.BorderStyle = Gizmox.WebGUI.Forms.BorderStyle.Fixed3D;
-            this.cboProvince.DropDownStyle = Gizmox.WebGUI.Forms.ComboBoxStyle.DropDownList;
-            this.cboProvince.Location = new System.Drawing.Point(98, 58);
-            this.cboProvince.Name = "cboProvince";
-            this.cboProvince.Size = new System.Drawing.Size(297, 21);
-            this.cboProvince.TabIndex = 5;
-            // 
-            // lblPhoneCode
-            // 
-            this.lblPhoneCode.Location = new System.Drawing.Point(6, 161);
-            this.lblPhoneCode.Name = "lblPhoneCode";
-            this.lblPhoneCode.Size = new System.Drawing.Size(90, 21);
-            this.lblPhoneCode.TabIndex = 14;
-            this.lblPhoneCode.Text = "Area Code:";
-            // 
-            // txtPhoneCode
-            // 
-            this.txtPhoneCode.Location = new System.Drawing.Point(98, 161);
-            this.txtPhoneCode.Name = "txtPhoneCode";
-            this.txtPhoneCode.Size = new System.Drawing.Size(297, 20);
-            this.txtPhoneCode.TabIndex = 15;
             // 
             // CityRecord
             // 
@@ -361,6 +354,8 @@ namespace xPort5.Admin.Coding.City
             this.StartPosition = Gizmox.WebGUI.Forms.FormStartPosition.CenterScreen;
             this.Text = "City Record";
             this.Load += new System.EventHandler(this.SupplierRecord_Load);
+            this.wspBackground.ResumeLayout(false);
+            this.boxLogs.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
