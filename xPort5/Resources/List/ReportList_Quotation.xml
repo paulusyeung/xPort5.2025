@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <Reports PanelType="CardView">
-    <Report Caption="Price List" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Price List" Tag="Price_List" LastAccessedOn=""></Report>
-    <Report Caption="Sample Request" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Samples in this quotation" Tag="Sample_Request" LastAccessedOn=""></Report>
-    <Report Caption="Quotation" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Quotation with thumbnails in appendix" Tag="Quotation" LastAccessedOn=""></Report>
-    <Report Caption="Quotation - With Photo" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Quotation with pictures in appendix" Tag="Quotation_With_Photo" LastAccessedOn=""></Report>
-    <Report Caption="Price List" Image_ListView="Icons.48x48.excel_48x48.gif" Image_CardView="Icons.48x48.excel_48x48.gif" Image_Thumb="Icons.48x48.excel_48x48.gif" Description="Price List in Excel format" Tag="Price_List_Xls" LastAccessedOn="" />
+    <Report Caption="Price List" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Price List" Tag="Price_List" LastAccessedOn=""></Report>
+    <Report Caption="Sample Request" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Samples in this quotation" Tag="Sample_Request" LastAccessedOn=""></Report>
+    <Report Caption="Quotation" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Quotation with thumbnails in appendix" Tag="Quotation" LastAccessedOn=""></Report>
+    <Report Caption="Quotation - With Photo" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Quotation with pictures in appendix" Tag="Quotation_With_Photo" LastAccessedOn=""></Report>
+    <Report Caption="Price List" Image_ListView="48x48.excel_48x48.gif" Image_CardView="48x48.excel_48x48.gif" Image_Thumb="48x48.excel_48x48.gif" Description="Price List in Excel format" Tag="Price_List_Xls" LastAccessedOn="" />
   </Reports>
 </root>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <Reports PanelType="CardView">
-    <Report Caption="Purchase Contract" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Purchase Contract" Tag="Purchase_Contract" LastAccessedOn="" />
-    <Report Caption="Purchase Contract Mark" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Purchase Contract Mark" Tag="Purchase_ContractMark" LastAccessedOn="" />
-    <Report Caption="Purchase Contract - No Shipping Info" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Purchase Contract - No Shipping Info" Tag="Purchase_ContractNoShippingInfo" LastAccessedOn="" />
-    <Report Caption="Purchase Contract" Image_ListView="Icons.48x48.excel_48x48.gif" Image_CardView="Icons.48x48.excel_48x48.gif" Image_Thumb="Icons.48x48.excel_48x48.gif" Description="Purchase_Contract in Excel format" Tag="Purchase_Contract_Xls" LastAccessedOn="" />
+    <Report Caption="Purchase Contract" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Purchase Contract" Tag="Purchase_Contract" LastAccessedOn="" />
+    <Report Caption="Purchase Contract Mark" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Purchase Contract Mark" Tag="Purchase_ContractMark" LastAccessedOn="" />
+    <Report Caption="Purchase Contract - No Shipping Info" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Purchase Contract - No Shipping Info" Tag="Purchase_ContractNoShippingInfo" LastAccessedOn="" />
+    <Report Caption="Purchase Contract" Image_ListView="48x48.excel_48x48.gif" Image_CardView="48x48.excel_48x48.gif" Image_Thumb="48x48.excel_48x48.gif" Description="Purchase_Contract in Excel format" Tag="Purchase_Contract_Xls" LastAccessedOn="" />
   </Reports>
 </root>

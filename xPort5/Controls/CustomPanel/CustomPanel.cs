@@ -33,6 +33,14 @@ namespace xPort5.Controls.CustomPanel
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+
+            SetAttributes();
+        }
+
+        private void SetAttributes()
+        {
+            flowLayoutPanel.WrapContents = true;
+            flowLayoutPanel.Margin = new Padding(20, 10, 0, 0);
         }
 
         #region Panels

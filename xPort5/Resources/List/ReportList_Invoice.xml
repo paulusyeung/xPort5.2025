@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <Reports PanelType="CardView">
-    <Report Caption="Invoice" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Invoice" Tag="Invoice" LastAccessedOn="" />
-    <Report Caption="Packing List" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Packing List" Tag="Packing_List" LastAccessedOn="" />
-    <Report Caption="Packing List - for CF" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Packing List - for CF" Tag="Packing_ListForCF" LastAccessedOn="" />
-    <Report Caption="Packing List - Measurement in Inch" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Packing List - Measurement in Inch" Tag="Packing_ListMeasurementInInch" LastAccessedOn="" />
-    <Report Caption="Packing List - with One Shipping Mark" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Packing List - with One Shipping Mark" Tag="Packing_ListWithOneShippingMark" LastAccessedOn="" />
-    <Report Caption="Shipment Advise" Image_ListView="Icons.48x48.pdf_48x48.gif" Image_CardView="Icons.48x48.pdf_48x48.gif" Image_Thumb="Icons.48x48.pdf_48x48.gif" Description="Shipment Advise" Tag="Shipment_Advise" LastAccessedOn="" />
-    <Report Caption="Packing List" Image_ListView="Icons.48x48.excel_48x48.gif" Image_CardView="Icons.48x48.excel_48x48.gif" Image_Thumb="Icons.48x48.excel_48x48.gif" Description="Packing List in Excel format" Tag="Packing_List_Xls" LastAccessedOn="" />
+    <Report Caption="Invoice" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Invoice" Tag="Invoice" LastAccessedOn="" />
+    <Report Caption="Packing List" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Packing List" Tag="Packing_List" LastAccessedOn="" />
+    <Report Caption="Packing List - for CF" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Packing List - for CF" Tag="Packing_ListForCF" LastAccessedOn="" />
+    <Report Caption="Packing List - Measurement in Inch" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Packing List - Measurement in Inch" Tag="Packing_ListMeasurementInInch" LastAccessedOn="" />
+    <Report Caption="Packing List - with One Shipping Mark" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Packing List - with One Shipping Mark" Tag="Packing_ListWithOneShippingMark" LastAccessedOn="" />
+    <Report Caption="Shipment Advise" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Shipment Advise" Tag="Shipment_Advise" LastAccessedOn="" />
+    <Report Caption="Packing List" Image_ListView="48x48.excel_48x48.gif" Image_CardView="48x48.excel_48x48.gif" Image_Thumb="48x48.excel_48x48.gif" Description="Packing List in Excel format" Tag="Packing_List_Xls" LastAccessedOn="" />
   </Reports>
 </root>
