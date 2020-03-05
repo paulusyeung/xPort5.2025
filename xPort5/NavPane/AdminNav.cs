@@ -45,6 +45,7 @@ namespace xPort5.NavPane
             {
                 switch (Tag)
                 {
+                    #region Olap
                     case "Olap.SalesTurnover":
                         AddOlapPage(ref wspPane, "Admin/Olap/SalesTurnover.aspx", "Customer", true, false);
                         break;
@@ -69,6 +70,9 @@ namespace xPort5.NavPane
                     case "Olap.ShipmentSummary":
                         AddOlapPage(ref wspPane, "Admin/Olap/ShipmentSummary.aspx", "Customer", true, true);
                         break;
+                    #endregion
+
+                    #region Coding
                     case "Coding.Address":
                         xPort5.Admin.Coding.Address.AddressList addrList = new xPort5.Admin.Coding.Address.AddressList();
                         addrList.DockPadding.All = 6;
@@ -201,6 +205,7 @@ namespace xPort5.NavPane
                         staffList.Dock = DockStyle.Fill;
                         wspPane.Controls.Add(staffList);
                         break;
+                    #endregion
                 }
             }
         }

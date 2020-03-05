@@ -10,7 +10,7 @@
 namespace xPort5.Admin.Olap {
     
     
-    public partial class OutstandingOrderSummary {
+    public partial class SalesTurnover_v5 {
         
         /// <summary>
         /// form1 control.
@@ -112,22 +112,22 @@ namespace xPort5.Admin.Olap {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divPivotGrid;
         
         /// <summary>
-        /// olapOSOrderExporter control.
+        /// olapSalesTurnoverExporter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter olapOSOrderExporter;
+        protected global::DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter olapSalesTurnoverExporter;
         
         /// <summary>
-        /// olapOSOrder control.
+        /// olapSalesTurnover control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid olapOSOrder;
+        protected global::DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid olapSalesTurnover;
         
         /// <summary>
         /// olapSqlDataSource control.
@@ -146,5 +146,23 @@ namespace xPort5.Admin.Olap {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField CustomerId;
+        
+        /// <summary>
+        /// FromDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField FromDate;
+        
+        /// <summary>
+        /// ToDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField ToDate;
     }
 }

@@ -1,10 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InvoiceSummaryByMonth.aspx.cs"
-    Inherits="xPort3.Admin.Olap.InvoiceSummaryByMonth" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SalesTurnover_v5.aspx.cs" Inherits="xPort5.Admin.Olap.SalesTurnover_v5" %>
 
-<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v7.2, Version=7.2.3.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1"
-    Namespace="DevExpress.Web.ASPxPivotGrid" TagPrefix="dxwpg" %>
-<%@ Register Assembly="DevExpress.XtraPivotGrid.v7.2, Version=7.2.3.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1"
-    Namespace="DevExpress.XtraPivotGrid.Web" TagPrefix="dxpgw" %>
+<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxPivotGrid" TagPrefix="dxwpg" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -60,8 +56,9 @@
     </div>
     <div id="divPivotGrid" style="font: 10pt Tahoma; border-right: 0; border-top: 0;
         border-left: 0; padding: 0px 0px 0px 0px;" runat="server">
-        <dxpgw:ASPxPivotGridExporter ID="olapInvoiceByMonthExporter" runat="server" ASPxPivotGridID="olapInvoiceByMonth" />
-        <dxwpg:ASPxPivotGrid ID="olapInvoiceByMonth" runat="server" DataSourceID="olapSqlDataSource">
+        <dxwpg:ASPxPivotGridExporter ID="olapSalesTurnoverExporter" runat="server" ASPxPivotGridID="olapSalesTurnover" />
+        <dxwpg:ASPxPivotGrid ID="olapSalesTurnover" runat="server" 
+            DataSourceID="olapSqlDataSource" onprerender="olapSalesTurnover_PreRender">
             <Styles CssFilePath="~/App_Themes/Glass/{0}/styles.css" CssPostfix="Glass">
                 <HeaderStyle>
                     <HoverStyle>
@@ -79,14 +76,52 @@
             </Styles>
             <OptionsLoadingPanel Text="Loading&amp;hellip;">
             </OptionsLoadingPanel>
+            <Fields>
+                <dxwpg:PivotGridField Area="RowArea" AreaIndex="0" Caption="Customer Name" 
+                    FieldName="CustName">
+                </dxwpg:PivotGridField>
+                <dxwpg:PivotGridField Area="RowArea" AreaIndex="1" Caption="Pricing Terms" 
+                    FieldName="PricingTerms" >
+                </dxwpg:PivotGridField>
+                <dxwpg:PivotGridField Area="RowArea" AreaIndex="2" Caption="Invoice Number" 
+                    FieldName="INNumber">
+                </dxwpg:PivotGridField>
+                <dxwpg:PivotGridField Area="RowArea" AreaIndex="3" Caption="Currency" 
+                    FieldName="Currency">
+                </dxwpg:PivotGridField>
+                <dxwpg:PivotGridField Area="ColumnArea" AreaIndex="0" Caption="Year" 
+                    FieldName="INDate" GroupInterval="DateYear">
+                </dxwpg:PivotGridField>
+                <dxwpg:PivotGridField Area="DataArea" AreaIndex="0" Caption="Amount" CellFormat-FormatString="{0:n2}"
+                    CellFormat-FormatType="Numeric" FieldName="ExtAmount">
+                </dxwpg:PivotGridField>
+                <dxwpg:PivotGridField Area="DataArea" AreaIndex="1" Caption="HKD Amount" CellFormat-FormatString="{0:n2}"
+                    CellFormat-FormatType="Numeric" FieldName="ExtHKDAmount">
+                </dxwpg:PivotGridField>
+                <dxwpg:PivotGridField Area="DataArea" AreaIndex="2" Caption="Over All" CellFormat-FormatString="{0:p0}"
+                    CellFormat-FormatType="Custom" Visible="False" TopValueShowOthers="True">
+                </dxwpg:PivotGridField>
+                <dxwpg:PivotGridField Area="FilterArea" AreaIndex="0" Caption="Region" 
+                    FieldName="Region">
+                </dxwpg:PivotGridField>
+                <dxwpg:PivotGridField Area="FilterArea" AreaIndex="1" Caption="Quarter" 
+                    FieldName="INDate" GroupInterval="DateQuarter">
+                </dxwpg:PivotGridField>
+                <dxwpg:PivotGridField Area="FilterArea" AreaIndex="2" Caption="Month" 
+                    FieldName="INDate" GroupInterval="DateMonth">
+                </dxwpg:PivotGridField>
+            </Fields>
             <Images ImageFolder="~/App_Themes/Glass/{0}/">
             </Images>
-            <OptionsPager RowsPerPage="100" EllipsisMode="OutsideNumeric" ShowDisabledButtons="False">
+            <OptionsPager RowsPerPage="100" EllipsisMode="OutsideNumeric" 
+                ShowDisabledButtons="False">
             </OptionsPager>
+            <OptionsView ShowColumnGrandTotals="False" ShowColumnTotals="False" 
+                ShowGrandTotalsForSingleValues="True" ShowRowTotals="False" />
         </dxwpg:ASPxPivotGrid>
         <asp:SqlDataSource ID="olapSqlDataSource" runat="server" 
             ConnectionString="<%$ ConnectionStrings:SysDb %>" 
-            SelectCommand="olap_MonthlyInvoiceSummary" SelectCommandType="StoredProcedure">
+            SelectCommand="olap_SalesTurnover" SelectCommandType="StoredProcedure">
             <SelectParameters>
                 <asp:ControlParameter ControlID="CustomerId" Name="CustomerId_Array" 
                     PropertyName="Value" Type="String" />

@@ -71,6 +71,7 @@
     <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v15.2.UI, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v15.2.Web, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPivotGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -417,6 +418,13 @@
     </Compile>
     <Compile Include="Admin\Olap\SalesContract.aspx.designer.cs">
       <DependentUpon>SalesContract.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Olap\SalesTurnover_v5.aspx.cs">
+      <DependentUpon>SalesTurnover_v5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Olap\SalesTurnover_v5.aspx.designer.cs">
+      <DependentUpon>SalesTurnover_v5.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Olap\SalesTurnover.aspx.cs">
       <DependentUpon>SalesTurnover.aspx</DependentUpon>
@@ -1401,6 +1409,7 @@
     <Compile Include="Settings\Utility.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Olap\SalesTurnover_v5.aspx" />
     <Content Include="App_Themes\Glass\ASPxPivotGrid.skin" />
     <None Include="Controls\Reporting\RS\DataSource.xsc">
       <DependentUpon>DataSource.xsd</DependentUpon>

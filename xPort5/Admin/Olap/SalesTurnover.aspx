@@ -1,10 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SalesTurnover.aspx.cs"
-    Inherits="xPort5.Admin.Olap.SalesTurnover" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SalesTurnover.aspx.cs" Inherits="xPort5.Admin.Olap.SalesTurnover" %>
 
-<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
-    Namespace="DevExpress.Web.ASPxPivotGrid" TagPrefix="dxwpg" %>
-<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
-    Namespace="DevExpress.XtraPivotGrid.Web" TagPrefix="dxpgw" %>
+<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxPivotGrid" TagPrefix="dxwpg" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -60,7 +56,7 @@
     </div>
     <div id="divPivotGrid" style="font: 10pt Tahoma; border-right: 0; border-top: 0;
         border-left: 0; padding: 0px 0px 0px 0px;" runat="server">
-        <dxpgw:ASPxPivotGridExporter ID="olapSalesTurnoverExporter" runat="server" ASPxPivotGridID="olapSalesTurnover" />
+        <dxwpg:ASPxPivotGridExporter ID="olapSalesTurnoverExporter" runat="server" ASPxPivotGridID="olapSalesTurnover" />
         <dxwpg:ASPxPivotGrid ID="olapSalesTurnover" runat="server" 
             DataSourceID="olapSqlDataSource" onprerender="olapSalesTurnover_PreRender">
             <Styles CssFilePath="~/App_Themes/Glass/{0}/styles.css" CssPostfix="Glass">

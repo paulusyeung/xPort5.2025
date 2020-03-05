@@ -2199,22 +2199,22 @@
     <cht>客戶</cht>
   </keyword>
   <keyword key="customer_code">
-    <en>Customer</en>
+    <en>Customer Code</en>
     <chs>客户编号</chs>
     <cht>客戶編號</cht>
   </keyword>
   <keyword key="customer_name">
-    <en>Customer</en>
+    <en>Customer Name</en>
     <chs>客户名称</chs>
     <cht>客戶名稱</cht>
   </keyword>
   <keyword key="customer_name_chs">
-    <en>Customer</en>
+    <en>Customer Name (Chs)</en>
     <chs>客户名称(简)</chs>
     <cht>客戶名稱(簡)</cht>
   </keyword>
   <keyword key="customer_name_cht">
-    <en>Customer</en>
+    <en>Customer Name (Cht)</en>
     <chs>客户名称(繁)</chs>
     <cht>客戶名稱(繁)</cht>
   </keyword>

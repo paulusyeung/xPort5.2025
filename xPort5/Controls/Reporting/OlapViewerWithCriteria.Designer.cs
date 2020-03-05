@@ -41,25 +41,31 @@ namespace xPort5.Controls.Reporting
             this.rbtnName = new Gizmox.WebGUI.Forms.RadioButton();
             this.tpPeriod = new Gizmox.WebGUI.Forms.TabPage();
             this.gbReportingPeriod = new Gizmox.WebGUI.Forms.GroupBox();
+            this.cboCurrency = new Gizmox.WebGUI.Forms.ComboBox();
             this.dtpTo = new Gizmox.WebGUI.Forms.DateTimePicker();
+            this.lblCurrency = new Gizmox.WebGUI.Forms.Label();
             this.lblTo = new Gizmox.WebGUI.Forms.Label();
             this.dtpFrom = new Gizmox.WebGUI.Forms.DateTimePicker();
             this.lblFrom = new Gizmox.WebGUI.Forms.Label();
             this.btnSelectionAll = new Gizmox.WebGUI.Forms.Button();
             this.viewerPane = new Gizmox.WebGUI.Forms.Panel();
-            this.lblCurrency = new Gizmox.WebGUI.Forms.Label();
-            this.cboCurrency = new Gizmox.WebGUI.Forms.ComboBox();
+            this.panelTree.SuspendLayout();
+            this.panelTabs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabOptions)).BeginInit();
+            this.tabOptions.SuspendLayout();
+            this.tpOption.SuspendLayout();
+            this.gbSelectionBy.SuspendLayout();
+            this.tpPeriod.SuspendLayout();
+            this.gbReportingPeriod.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer
             // 
-            this.splitContainer.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
+            this.splitContainer.AutoValidate = Gizmox.WebGUI.Forms.AutoValidate.EnablePreventFocusChange;
             this.splitContainer.BorderStyle = Gizmox.WebGUI.Forms.BorderStyle.Clear;
             this.splitContainer.Dock = Gizmox.WebGUI.Forms.DockStyle.Fill;
-            this.splitContainer.FixedPanel = Gizmox.WebGUI.Forms.FixedPanel.None;
             this.splitContainer.Location = new System.Drawing.Point(0, 0);
             this.splitContainer.Name = "splitContainer";
-            this.splitContainer.Orientation = Gizmox.WebGUI.Forms.Orientation.Vertical;
             // 
             // splitContainer.Panel1
             // 
@@ -75,7 +81,6 @@ namespace xPort5.Controls.Reporting
             // 
             // panelTree
             // 
-            this.panelTree.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
             this.panelTree.Controls.Add(this.tvList);
             this.panelTree.Dock = Gizmox.WebGUI.Forms.DockStyle.Fill;
             this.panelTree.Location = new System.Drawing.Point(0, 170);
@@ -85,7 +90,6 @@ namespace xPort5.Controls.Reporting
             // 
             // tvList
             // 
-            this.tvList.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
             this.tvList.Dock = Gizmox.WebGUI.Forms.DockStyle.Fill;
             this.tvList.Location = new System.Drawing.Point(0, 0);
             this.tvList.Name = "tvList";
@@ -95,7 +99,6 @@ namespace xPort5.Controls.Reporting
             // 
             // panelTabs
             // 
-            this.panelTabs.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
             this.panelTabs.Controls.Add(this.btnOK);
             this.panelTabs.Controls.Add(this.btnClearSelection);
             this.panelTabs.Controls.Add(this.tabOptions);
@@ -126,12 +129,10 @@ namespace xPort5.Controls.Reporting
             // 
             // tabOptions
             // 
-            this.tabOptions.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
             this.tabOptions.Controls.Add(this.tpOption);
             this.tabOptions.Controls.Add(this.tpPeriod);
             this.tabOptions.Dock = Gizmox.WebGUI.Forms.DockStyle.Top;
             this.tabOptions.Location = new System.Drawing.Point(0, 0);
-            this.tabOptions.Multiline = false;
             this.tabOptions.Name = "tabOptions";
             this.tabOptions.SelectedIndex = 0;
             this.tabOptions.Size = new System.Drawing.Size(210, 132);
@@ -140,6 +141,7 @@ namespace xPort5.Controls.Reporting
             // tpOption
             // 
             this.tpOption.Controls.Add(this.gbSelectionBy);
+            this.tpOption.Dock = Gizmox.WebGUI.Forms.DockStyle.Fill;
             this.tpOption.Location = new System.Drawing.Point(4, 22);
             this.tpOption.Name = "tpOption";
             this.tpOption.Size = new System.Drawing.Size(202, 106);
@@ -155,13 +157,14 @@ namespace xPort5.Controls.Reporting
             this.gbSelectionBy.Name = "gbSelectionBy";
             this.gbSelectionBy.Size = new System.Drawing.Size(182, 85);
             this.gbSelectionBy.TabIndex = 1;
+            this.gbSelectionBy.TabStop = false;
             this.gbSelectionBy.Text = "Selection by";
             // 
             // rbtnCode
             // 
             this.rbtnCode.Location = new System.Drawing.Point(25, 31);
             this.rbtnCode.Name = "rbtnCode";
-            this.rbtnCode.Size = new System.Drawing.Size(104, 24);
+            this.rbtnCode.Size = new System.Drawing.Size(146, 24);
             this.rbtnCode.TabIndex = 1;
             this.rbtnCode.Text = "Customer Code";
             this.rbtnCode.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
@@ -171,7 +174,7 @@ namespace xPort5.Controls.Reporting
             this.rbtnName.Checked = true;
             this.rbtnName.Location = new System.Drawing.Point(25, 56);
             this.rbtnName.Name = "rbtnName";
-            this.rbtnName.Size = new System.Drawing.Size(104, 24);
+            this.rbtnName.Size = new System.Drawing.Size(146, 24);
             this.rbtnName.TabIndex = 2;
             this.rbtnName.Text = "Customer Name";
             this.rbtnName.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
@@ -179,6 +182,7 @@ namespace xPort5.Controls.Reporting
             // tpPeriod
             // 
             this.tpPeriod.Controls.Add(this.gbReportingPeriod);
+            this.tpPeriod.Dock = Gizmox.WebGUI.Forms.DockStyle.Fill;
             this.tpPeriod.Location = new System.Drawing.Point(4, 22);
             this.tpPeriod.Name = "tpPeriod";
             this.tpPeriod.Size = new System.Drawing.Size(202, 106);
@@ -198,17 +202,36 @@ namespace xPort5.Controls.Reporting
             this.gbReportingPeriod.Name = "gbReportingPeriod";
             this.gbReportingPeriod.Size = new System.Drawing.Size(182, 85);
             this.gbReportingPeriod.TabIndex = 1;
+            this.gbReportingPeriod.TabStop = false;
             this.gbReportingPeriod.Text = "Reporting Period";
+            // 
+            // cboCurrency
+            // 
+            this.cboCurrency.BorderStyle = Gizmox.WebGUI.Forms.BorderStyle.Fixed3D;
+            this.cboCurrency.Location = new System.Drawing.Point(66, 52);
+            this.cboCurrency.Name = "cboCurrency";
+            this.cboCurrency.Size = new System.Drawing.Size(95, 21);
+            this.cboCurrency.TabIndex = 1;
+            this.cboCurrency.Visible = false;
             // 
             // dtpTo
             // 
-            this.dtpTo.CalendarFirstDayOfWeek = Gizmox.WebGUI.Forms.Day.Default;
             this.dtpTo.CustomFormat = "dd/MM/yyyy";
             this.dtpTo.Format = Gizmox.WebGUI.Forms.DateTimePickerFormat.Custom;
             this.dtpTo.Location = new System.Drawing.Point(66, 53);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(95, 20);
             this.dtpTo.TabIndex = 2;
+            // 
+            // lblCurrency
+            // 
+            this.lblCurrency.AutoSize = true;
+            this.lblCurrency.Location = new System.Drawing.Point(19, 55);
+            this.lblCurrency.Name = "lblCurrency";
+            this.lblCurrency.Size = new System.Drawing.Size(33, 13);
+            this.lblCurrency.TabIndex = 0;
+            this.lblCurrency.Text = "Cny: ";
+            this.lblCurrency.Visible = false;
             // 
             // lblTo
             // 
@@ -221,7 +244,6 @@ namespace xPort5.Controls.Reporting
             // 
             // dtpFrom
             // 
-            this.dtpFrom.CalendarFirstDayOfWeek = Gizmox.WebGUI.Forms.Day.Default;
             this.dtpFrom.CustomFormat = "dd/MM/yyyy";
             this.dtpFrom.Format = Gizmox.WebGUI.Forms.DateTimePickerFormat.Custom;
             this.dtpFrom.Location = new System.Drawing.Point(66, 26);
@@ -249,37 +271,25 @@ namespace xPort5.Controls.Reporting
             // 
             // viewerPane
             // 
-            this.viewerPane.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
             this.viewerPane.Dock = Gizmox.WebGUI.Forms.DockStyle.Fill;
             this.viewerPane.Location = new System.Drawing.Point(0, 0);
             this.viewerPane.Name = "viewerPane";
             this.viewerPane.Size = new System.Drawing.Size(586, 600);
             this.viewerPane.TabIndex = 0;
             // 
-            // lblCurrency
-            // 
-            this.lblCurrency.AutoSize = true;
-            this.lblCurrency.Location = new System.Drawing.Point(19, 55);
-            this.lblCurrency.Name = "lblCurrency";
-            this.lblCurrency.Size = new System.Drawing.Size(33, 13);
-            this.lblCurrency.TabIndex = 0;
-            this.lblCurrency.Text = "Cny: ";
-            this.lblCurrency.Visible = false;
-            // 
-            // cboCurrency
-            // 
-            this.cboCurrency.BorderStyle = Gizmox.WebGUI.Forms.BorderStyle.Fixed3D;
-            this.cboCurrency.Location = new System.Drawing.Point(66, 52);
-            this.cboCurrency.Name = "cboCurrency";
-            this.cboCurrency.Size = new System.Drawing.Size(95, 21);
-            this.cboCurrency.TabIndex = 1;
-            this.cboCurrency.Visible = false;
-            // 
             // OlapViewerWithCriteria
             // 
             this.Controls.Add(this.splitContainer);
             this.Size = new System.Drawing.Size(800, 600);
             this.Text = "OlapViewerWithCriteria";
+            this.panelTree.ResumeLayout(false);
+            this.panelTabs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tabOptions)).EndInit();
+            this.tabOptions.ResumeLayout(false);
+            this.tpOption.ResumeLayout(false);
+            this.gbSelectionBy.ResumeLayout(false);
+            this.tpPeriod.ResumeLayout(false);
+            this.gbReportingPeriod.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
