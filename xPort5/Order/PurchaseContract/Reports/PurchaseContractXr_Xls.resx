@@ -112,414 +112,81 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Detail.Name" xml:space="preserve">
-    <value>Detail</value>
-  </metadata>
-  <metadata name="txtParticular.Name" xml:space="preserve">
-    <value>txtParticular</value>
-  </metadata>
-  <assembly alias="DevExpress.XtraReports.v15.2" name="DevExpress.XtraReports.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="txtParticular.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        rwF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWwgVW5pY29kZSBNUzt9DQp9DQp7DQpcY29sb3J0YmwNCjsNClxyZWQwXGdyZWVuMFxibHVl
-        MDsNCn0NCntccGFyZFxwbGFpbntcZjFcZnMxOFxjZjEgdHh0UGFydGljdWxhcn1ccGFyfQ0KfQ0KCw==
-</value>
+  <data name="txtParticular.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAIABVAG4AaQBjAG8AZABlACAATQBTADsAfQANAAoAfQANAAoAewANAAoAXABjAG8AbABvAHIAdABiAGwADQAKADsADQAKAFwAcgBlAGQAMABcAGcAcgBlAGUAbgAwAFwAYgBsAHUAZQAwADsADQAKAH0ADQAKAHsAXABwAGEAcgBkAFwAcABsAGEAaQBuAHsAXABmADEAXABmAHMAMQA4AFwAYwBmADEAIAB0AHgAdABQAGEAcgB0AGkAYwB1AGwAYQByAH0AXABwAGEAcgB9AA0ACgB9AA0ACgA=</value>
   </data>
-  <metadata name="txtPacking.Name" xml:space="preserve">
-    <value>txtPacking</value>
-  </metadata>
-  <data name="txtPacking.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        oQF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIHR4dFBhY2tpbmd9XHBhcn0NCn0NCgs=
-</value>
+  <data name="txtPacking.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAHQAeAB0AFAAYQBjAGsAaQBuAGcAfQBcAHAAYQByAH0ADQAKAH0ADQAKAA==</value>
   </data>
-  <metadata name="txtColor.Name" xml:space="preserve">
-    <value>txtColor</value>
-  </metadata>
-  <data name="txtColor.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        nwF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIHR4dENvbG9yfVxwYXJ9DQp9DQoL
-</value>
+  <data name="txtColor.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAHQAeAB0AEMAbwBsAG8AcgB9AFwAcABhAHIAfQANAAoAfQANAAoA</value>
   </data>
-  <metadata name="subShipment.Name" xml:space="preserve">
-    <value>subShipment</value>
-  </metadata>
-  <metadata name="txtAmount.Name" xml:space="preserve">
-    <value>txtAmount</value>
-  </metadata>
-  <metadata name="txtUnitPrice.Name" xml:space="preserve">
-    <value>txtUnitPrice</value>
-  </metadata>
-  <metadata name="txtUnit.Name" xml:space="preserve">
-    <value>txtUnit</value>
-  </metadata>
-  <metadata name="txtQty.Name" xml:space="preserve">
-    <value>txtQty</value>
-  </metadata>
-  <metadata name="txtArticleCode.Name" xml:space="preserve">
-    <value>txtArticleCode</value>
-  </metadata>
-  <metadata name="txtArticleName.Name" xml:space="preserve">
-    <value>txtArticleName</value>
-  </metadata>
-  <data name="txtArticleName.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        pQF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIHR4dEFydGljbGVOYW1lfVxwYXJ9DQp9DQoL
-</value>
+  <data name="txtArticleName.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAHQAeAB0AEEAcgB0AGkAYwBsAGUATgBhAG0AZQB9AFwAcABhAHIAfQANAAoAfQANAAoA</value>
   </data>
-  <metadata name="txtCustRef.Name" xml:space="preserve">
-    <value>txtCustRef</value>
-  </metadata>
-  <metadata name="txtSuppRef.Name" xml:space="preserve">
-    <value>txtSuppRef</value>
-  </metadata>
-  <metadata name="PageHeader.Name" xml:space="preserve">
-    <value>PageHeader</value>
-  </metadata>
-  <metadata name="txtHeader.Name" xml:space="preserve">
-    <value>txtHeader</value>
-  </metadata>
-  <data name="txtHeader.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        jwF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCn0N
-        CnsNClxjb2xvcnRibA0KOw0KXHJlZDBcZ3JlZW4wXGJsdWUwOw0KfQ0Ke1xwYXJkXHBsYWlue1xmczE4
-        XGNmMSB0eHRIZWFkZXJ9XHBhcn0NCn0NCgs=
-</value>
+  <data name="txtHeader.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAH0ADQAKAHsADQAKAFwAYwBvAGwAbwByAHQAYgBsAA0ACgA7AA0ACgBcAHIAZQBkADAAXABnAHIAZQBlAG4AMABcAGIAbAB1AGUAMAA7AA0ACgB9AA0ACgB7AFwAcABhAHIAZABcAHAAbABhAGkAbgB7AFwAZgBzADEAOABcAGMAZgAxACAAdAB4AHQASABlAGEAZABlAHIAfQBcAHAAYQByAH0ADQAKAH0ADQAKAA==</value>
   </data>
-  <metadata name="PageFooter.Name" xml:space="preserve">
-    <value>PageFooter</value>
-  </metadata>
-  <metadata name="GroupHeader1.Name" xml:space="preserve">
-    <value>GroupHeader1</value>
-  </metadata>
-  <metadata name="xrLabel15.Name" xml:space="preserve">
-    <value>xrLabel15</value>
-  </metadata>
-  <metadata name="xrLabel16.Name" xml:space="preserve">
-    <value>xrLabel16</value>
-  </metadata>
-  <metadata name="xrLabel1.Name" xml:space="preserve">
-    <value>xrLabel1</value>
-  </metadata>
-  <metadata name="xrLabel17.Name" xml:space="preserve">
-    <value>xrLabel17</value>
-  </metadata>
-  <metadata name="xrLabel19.Name" xml:space="preserve">
-    <value>xrLabel19</value>
-  </metadata>
-  <metadata name="xrLabel20.Name" xml:space="preserve">
-    <value>xrLabel20</value>
-  </metadata>
-  <metadata name="gh1Currency1.Name" xml:space="preserve">
-    <value>gh1Currency1</value>
-  </metadata>
-  <metadata name="gh1Currency2.Name" xml:space="preserve">
-    <value>gh1Currency2</value>
-  </metadata>
-  <metadata name="xrLabel22.Name" xml:space="preserve">
-    <value>xrLabel22</value>
-  </metadata>
-  <metadata name="xrLabel21.Name" xml:space="preserve">
-    <value>xrLabel21</value>
-  </metadata>
-  <metadata name="GroupHeader2.Name" xml:space="preserve">
-    <value>GroupHeader2</value>
-  </metadata>
-  <metadata name="txtPricingTerms.Name" xml:space="preserve">
-    <value>txtPricingTerms</value>
-  </metadata>
-  <data name="txtPricingTerms.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        pgF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIHR4dFByaWNpbmdUZXJtc31ccGFyfQ0KfQ0KCw==
-</value>
+  <data name="txtPricingTerms.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAHQAeAB0AFAAcgBpAGMAaQBuAGcAVABlAHIAbQBzAH0AXABwAGEAcgB9AA0ACgB9AA0ACgA=</value>
   </data>
-  <metadata name="txtPayTerms.Name" xml:space="preserve">
-    <value>txtPayTerms</value>
-  </metadata>
-  <data name="txtPayTerms.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        ogF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIHR4dFBheVRlcm1zfVxwYXJ9DQp9DQoL
-</value>
+  <data name="txtPayTerms.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAHQAeAB0AFAAYQB5AFQAZQByAG0AcwB9AFwAcABhAHIAfQANAAoAfQANAAoA</value>
   </data>
-  <metadata name="txtCarrier.Name" xml:space="preserve">
-    <value>txtCarrier</value>
-  </metadata>
-  <data name="txtCarrier.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        oQF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIHR4dENhcnJpZXJ9XHBhcn0NCn0NCgs=
-</value>
+  <data name="txtCarrier.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAHQAeAB0AEMAYQByAHIAaQBlAHIAfQBcAHAAYQByAH0ADQAKAH0ADQAKAA==</value>
   </data>
-  <metadata name="xrLabel10.Name" xml:space="preserve">
-    <value>xrLabel10</value>
-  </metadata>
-  <metadata name="xrLabel9.Name" xml:space="preserve">
-    <value>xrLabel9</value>
-  </metadata>
-  <metadata name="xrLabel8.Name" xml:space="preserve">
-    <value>xrLabel8</value>
-  </metadata>
-  <metadata name="xrLabel7.Name" xml:space="preserve">
-    <value>xrLabel7</value>
-  </metadata>
-  <metadata name="txtYourRef.Name" xml:space="preserve">
-    <value>txtYourRef</value>
-  </metadata>
-  <data name="txtYourRef.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        oQF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIHR4dFlvdXJSZWZ9XHBhcn0NCn0NCgs=
-</value>
+  <data name="txtYourRef.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAHQAeAB0AFkAbwB1AHIAUgBlAGYAfQBcAHAAYQByAH0ADQAKAH0ADQAKAA==</value>
   </data>
-  <metadata name="GroupHeader3.Name" xml:space="preserve">
-    <value>GroupHeader3</value>
-  </metadata>
-  <metadata name="txtCustAddr.Name" xml:space="preserve">
-    <value>txtCustAddr</value>
-  </metadata>
-  <data name="txtCustAddr.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        rQF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWwgVW5pY29kZSBNUzt9DQp9DQp7DQpcY29sb3J0YmwNCjsNClxyZWQwXGdyZWVuMFxibHVl
-        MDsNCn0NCntccGFyZFxwbGFpbntcZjFcZnMxOFxjZjEgdHh0Q3VzdEFkZHJ9XHBhcn0NCn0NCgs=
-</value>
+  <data name="txtCustAddr.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAIABVAG4AaQBjAG8AZABlACAATQBTADsAfQANAAoAfQANAAoAewANAAoAXABjAG8AbABvAHIAdABiAGwADQAKADsADQAKAFwAcgBlAGQAMABcAGcAcgBlAGUAbgAwAFwAYgBsAHUAZQAwADsADQAKAH0ADQAKAHsAXABwAGEAcgBkAFwAcABsAGEAaQBuAHsAXABmADEAXABmAHMAMQA4AFwAYwBmADEAIAB0AHgAdABDAHUAcwB0AEEAZABkAHIAfQBcAHAAYQByAH0ADQAKAH0ADQAKAA==</value>
   </data>
-  <metadata name="txtFax.Name" xml:space="preserve">
-    <value>txtFax</value>
-  </metadata>
-  <data name="txtFax.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        nQF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIHR4dEZheH1ccGFyfQ0KfQ0KCw==
-</value>
+  <data name="txtFax.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAHQAeAB0AEYAYQB4AH0AXABwAGEAcgB9AA0ACgB9AA0ACgA=</value>
   </data>
-  <metadata name="txtCustName.Name" xml:space="preserve">
-    <value>txtCustName</value>
-  </metadata>
-  <data name="txtCustName.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        rQF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWwgVW5pY29kZSBNUzt9DQp9DQp7DQpcY29sb3J0YmwNCjsNClxyZWQwXGdyZWVuMFxibHVl
-        MDsNCn0NCntccGFyZFxwbGFpbntcZjFcZnMxOFxjZjEgdHh0Q3VzdE5hbWV9XHBhcn0NCn0NCgs=
-</value>
+  <data name="txtCustName.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAIABVAG4AaQBjAG8AZABlACAATQBTADsAfQANAAoAfQANAAoAewANAAoAXABjAG8AbABvAHIAdABiAGwADQAKADsADQAKAFwAcgBlAGQAMABcAGcAcgBlAGUAbgAwAFwAYgBsAHUAZQAwADsADQAKAH0ADQAKAHsAXABwAGEAcgBkAFwAcABsAGEAaQBuAHsAXABmADEAXABmAHMAMQA4AFwAYwBmADEAIAB0AHgAdABDAHUAcwB0AE4AYQBtAGUAfQBcAHAAYQByAH0ADQAKAH0ADQAKAA==</value>
   </data>
-  <metadata name="xrLabel3.Name" xml:space="preserve">
-    <value>xrLabel3</value>
-  </metadata>
-  <metadata name="xrLabel4.Name" xml:space="preserve">
-    <value>xrLabel4</value>
-  </metadata>
-  <metadata name="txtPCNumber.Name" xml:space="preserve">
-    <value>txtPCNumber</value>
-  </metadata>
-  <data name="txtPCNumber.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        ogF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIHR4dFBDTnVtYmVyfVxwYXJ9DQp9DQoL
-</value>
+  <data name="txtPCNumber.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAHQAeAB0AFAAQwBOAHUAbQBiAGUAcgB9AFwAcABhAHIAfQANAAoAfQANAAoA</value>
   </data>
-  <metadata name="txtPCDate.Name" xml:space="preserve">
-    <value>txtPCDate</value>
-  </metadata>
-  <data name="txtPCDate.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        oAF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIHR4dFBDRGF0ZX1ccGFyfQ0KfQ0KCw==
-</value>
+  <data name="txtPCDate.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAHQAeAB0AFAAQwBEAGEAdABlAH0AXABwAGEAcgB9AA0ACgB9AA0ACgA=</value>
   </data>
-  <metadata name="txtTel.Name" xml:space="preserve">
-    <value>txtTel</value>
-  </metadata>
-  <data name="txtTel.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        nQF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIHR4dFRlbH1ccGFyfQ0KfQ0KCw==
-</value>
+  <data name="txtTel.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAHQAeAB0AFQAZQBsAH0AXABwAGEAcgB9AA0ACgB9AA0ACgA=</value>
   </data>
-  <metadata name="GroupFooter1.Name" xml:space="preserve">
-    <value>GroupFooter1</value>
-  </metadata>
-  <metadata name="txtTotalAmount.Name" xml:space="preserve">
-    <value>txtTotalAmount</value>
-  </metadata>
-  <metadata name="xrLine1.Name" xml:space="preserve">
-    <value>xrLine1</value>
-  </metadata>
-  <metadata name="txtRemarks3.Name" xml:space="preserve">
-    <value>txtRemarks3</value>
-  </metadata>
-  <data name="txtRemarks3.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        rQF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWwgVW5pY29kZSBNUzt9DQp9DQp7DQpcY29sb3J0YmwNCjsNClxyZWQwXGdyZWVuMFxibHVl
-        MDsNCn0NCntccGFyZFxwbGFpbntcZjFcZnMxOFxjZjEgdHh0UmVtYXJrczN9XHBhcn0NCn0NCgs=
-</value>
+  <data name="txtRemarks3.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAIABVAG4AaQBjAG8AZABlACAATQBTADsAfQANAAoAfQANAAoAewANAAoAXABjAG8AbABvAHIAdABiAGwADQAKADsADQAKAFwAcgBlAGQAMABcAGcAcgBlAGUAbgAwAFwAYgBsAHUAZQAwADsADQAKAH0ADQAKAHsAXABwAGEAcgBkAFwAcABsAGEAaQBuAHsAXABmADEAXABmAHMAMQA4AFwAYwBmADEAIAB0AHgAdABSAGUAbQBhAHIAawBzADMAfQBcAHAAYQByAH0ADQAKAH0ADQAKAA==</value>
   </data>
-  <metadata name="txtRemarks2.Name" xml:space="preserve">
-    <value>txtRemarks2</value>
-  </metadata>
-  <data name="txtRemarks2.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        rQF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWwgVW5pY29kZSBNUzt9DQp9DQp7DQpcY29sb3J0YmwNCjsNClxyZWQwXGdyZWVuMFxibHVl
-        MDsNCn0NCntccGFyZFxwbGFpbntcZjFcZnMxOFxjZjEgdHh0UmVtYXJrczJ9XHBhcn0NCn0NCgs=
-</value>
+  <data name="txtRemarks2.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAIABVAG4AaQBjAG8AZABlACAATQBTADsAfQANAAoAfQANAAoAewANAAoAXABjAG8AbABvAHIAdABiAGwADQAKADsADQAKAFwAcgBlAGQAMABcAGcAcgBlAGUAbgAwAFwAYgBsAHUAZQAwADsADQAKAH0ADQAKAHsAXABwAGEAcgBkAFwAcABsAGEAaQBuAHsAXABmADEAXABmAHMAMQA4AFwAYwBmADEAIAB0AHgAdABSAGUAbQBhAHIAawBzADIAfQBcAHAAYQByAH0ADQAKAH0ADQAKAA==</value>
   </data>
-  <metadata name="txtRemarks.Name" xml:space="preserve">
-    <value>txtRemarks</value>
-  </metadata>
-  <data name="txtRemarks.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        rAF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWwgVW5pY29kZSBNUzt9DQp9DQp7DQpcY29sb3J0YmwNCjsNClxyZWQwXGdyZWVuMFxibHVl
-        MDsNCn0NCntccGFyZFxwbGFpbntcZjFcZnMxOFxjZjEgdHh0UmVtYXJrc31ccGFyfQ0KfQ0KCw==
-</value>
+  <data name="txtRemarks.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAIABVAG4AaQBjAG8AZABlACAATQBTADsAfQANAAoAfQANAAoAewANAAoAXABjAG8AbABvAHIAdABiAGwADQAKADsADQAKAFwAcgBlAGQAMABcAGcAcgBlAGUAbgAwAFwAYgBsAHUAZQAwADsADQAKAH0ADQAKAHsAXABwAGEAcgBkAFwAcABsAGEAaQBuAHsAXABmADEAXABmAHMAMQA4AFwAYwBmADEAIAB0AHgAdABSAGUAbQBhAHIAawBzAH0AXABwAGEAcgB9AA0ACgB9AA0ACgA=</value>
   </data>
-  <metadata name="gf1Currency.Name" xml:space="preserve">
-    <value>gf1Currency</value>
-  </metadata>
-  <metadata name="GroupFooter2.Name" xml:space="preserve">
-    <value>GroupFooter2</value>
-  </metadata>
-  <metadata name="xrLabel2.Name" xml:space="preserve">
-    <value>xrLabel2</value>
-  </metadata>
-  <metadata name="txtShippingMark.Name" xml:space="preserve">
-    <value>txtShippingMark</value>
-  </metadata>
-  <data name="txtShippingMark.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        pgF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIHR4dFNoaXBwaW5nTWFya31ccGFyfQ0KfQ0KCw==
-</value>
+  <data name="txtShippingMark.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAHQAeAB0AFMAaABpAHAAcABpAG4AZwBNAGEAcgBrAH0AXABwAGEAcgB9AA0ACgB9AA0ACgA=</value>
   </data>
-  <metadata name="GroupFooter3.Name" xml:space="preserve">
-    <value>GroupFooter3</value>
-  </metadata>
-  <metadata name="xrRichText23.Name" xml:space="preserve">
-    <value>xrRichText23</value>
-  </metadata>
-  <data name="xrRichText23.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        qgF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIFNJR05BVFVSRSBPRiBTRUxMRVJ9XHBhcn0NCn0NCgs=
-</value>
+  <data name="xrRichText23.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAFMASQBHAE4AQQBUAFUAUgBFACAATwBGACAAUwBFAEwATABFAFIAfQBcAHAAYQByAH0ADQAKAH0ADQAKAA==</value>
   </data>
-  <metadata name="xrRichText20.Name" xml:space="preserve">
-    <value>xrRichText20</value>
-  </metadata>
-  <data name="xrRichText20.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        qgF7XHJ0ZjFcYW5zaVxhbnNpY3BnOTM2XGRlZmYwe1xmb250dGJse1xmMFxmbmlsXGZjaGFyc2V0MCBI
-        ZWx2ZXRpY2E7fXtcZjFcZm5pbCBUaW1lcyBOZXcgUm9tYW47fX0NClx2aWV3a2luZDRcdWMxXHBhcmRc
-        bGFuZzIwNTJcZjBcZnMyMCBTSUdOQVRVUkUgT0YgQlVZRVJcZjFcZnMyNFxwYXINCn0NCgs=
-</value>
+  <data name="xrRichText20.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAFwAYQBuAHMAaQBjAHAAZwA5ADMANgBcAGQAZQBmAGYAMAB7AFwAZgBvAG4AdAB0AGIAbAB7AFwAZgAwAFwAZgBuAGkAbABcAGYAYwBoAGEAcgBzAGUAdAAwACAASABlAGwAdgBlAHQAaQBjAGEAOwB9AHsAXABmADEAXABmAG4AaQBsACAAVABpAG0AZQBzACAATgBlAHcAIABSAG8AbQBhAG4AOwB9AH0ADQAKAFwAdgBpAGUAdwBrAGkAbgBkADQAXAB1AGMAMQBcAHAAYQByAGQAXABsAGEAbgBnADIAMAA1ADIAXABmADAAXABmAHMAMgAwACAAUwBJAEcATgBBAFQAVQBSAEUAIABPAEYAIABCAFUAWQBFAFIAXABmADEAXABmAHMAMgA0AFwAcABhAHIADQAKAH0ADQAKAA==</value>
   </data>
-  <metadata name="xrRichText21.Name" xml:space="preserve">
-    <value>xrRichText21</value>
-  </metadata>
-  <data name="xrRichText21.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        mwF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIERBVEV9XHBhcn0NCn0NCgs=
-</value>
+  <data name="xrRichText21.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAEQAQQBUAEUAfQBcAHAAYQByAH0ADQAKAH0ADQAKAA==</value>
   </data>
-  <metadata name="xrRichText22.Name" xml:space="preserve">
-    <value>xrRichText22</value>
-  </metadata>
-  <data name="xrRichText22.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        nAF7XHJ0ZjFcYW5zaWNwZzkzNg0Kew0KXGZvbnR0YmwNCntcZjAgVGltZXMgTmV3IFJvbWFuO30NCntc
-        ZjEgQXJpYWw7fQ0KfQ0Kew0KXGNvbG9ydGJsDQo7DQpccmVkMFxncmVlbjBcYmx1ZTA7DQp9DQp7XHBh
-        cmRccGxhaW57XGYxXGZzMThcY2YxIFBMQUNFfVxwYXJ9DQp9DQoL
-</value>
+  <data name="xrRichText22.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAGMAcABnADkAMwA2AA0ACgB7AA0ACgBcAGYAbwBuAHQAdABiAGwADQAKAHsAXABmADAAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0ADQAKAHsAXABmADEAIABBAHIAaQBhAGwAOwB9AA0ACgB9AA0ACgB7AA0ACgBcAGMAbwBsAG8AcgB0AGIAbAANAAoAOwANAAoAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADAAOwANAAoAfQANAAoAewBcAHAAYQByAGQAXABwAGwAYQBpAG4AewBcAGYAMQBcAGYAcwAxADgAXABjAGYAMQAgAFAATABBAEMARQB9AFwAcABhAHIAfQANAAoAfQANAAoA</value>
   </data>
-  <metadata name="xrRichText19.Name" xml:space="preserve">
-    <value>xrRichText19</value>
-  </metadata>
-  <data name="xrRichText19.RtfText" type="DevExpress.XtraReports.UI.SerializableString, DevExpress.XtraReports.v15.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAABtEZXZFeHByZXNzLlh0cmFSZXBvcnRzLnY3LjIFAQAAACxEZXZF
-        eHByZXNzLlh0cmFSZXBvcnRzLlVJLlNlcmlhbGl6YWJsZVN0cmluZwEAAAAFVmFsdWUBAgAAAAYDAAAA
-        mQJ7XHJ0ZjFcYW5zaVxhbnNpY3BnOTM2XGRlZmYwe1xmb250dGJse1xmMFxmbmlsXGZjaGFyc2V0MCBI
-        ZWx2ZXRpY2E7fXtcZjFcZm5pbCBUaW1lcyBOZXcgUm9tYW47fX0NClx2aWV3a2luZDRcdWMxXHBhcmRc
-        bGFuZzIwNTJcZjBcZnMyMCBXRSBDT05GSVJNRUQgSEFWSU5HIFNPTEQgVE8gWU9VIFRIRSBBQk9WRSBH
-        T09EUyBTVUJKRUNUIFRPIFRIRSBURVJNUyBBTkQgQ09ORElUSU9JTlNccGFyDQpTVEFURUQgSEVSRUFC
-        T1ZFIEFORCBJTiBUSEUgQVRUQUNITUVOVC5cZjFcZnMyNFxwYXINCn0NCgs=
-</value>
+  <data name="xrRichText19.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABhAG4AcwBpAFwAYQBuAHMAaQBjAHAAZwA5ADMANgBcAGQAZQBmAGYAMAB7AFwAZgBvAG4AdAB0AGIAbAB7AFwAZgAwAFwAZgBuAGkAbABcAGYAYwBoAGEAcgBzAGUAdAAwACAASABlAGwAdgBlAHQAaQBjAGEAOwB9AHsAXABmADEAXABmAG4AaQBsACAAVABpAG0AZQBzACAATgBlAHcAIABSAG8AbQBhAG4AOwB9AH0ADQAKAFwAdgBpAGUAdwBrAGkAbgBkADQAXAB1AGMAMQBcAHAAYQByAGQAXABsAGEAbgBnADIAMAA1ADIAXABmADAAXABmAHMAMgAwACAAVwBFACAAQwBPAE4ARgBJAFIATQBFAEQAIABIAEEAVgBJAE4ARwAgAFMATwBMAEQAIABUAE8AIABZAE8AVQAgAFQASABFACAAQQBCAE8AVgBFACAARwBPAE8ARABTACAAUwBVAEIASgBFAEMAVAAgAFQATwAgAFQASABFACAAVABFAFIATQBTACAAQQBOAEQAIABDAE8ATgBEAEkAVABJAE8ASQBOAFMAXABwAGEAcgANAAoAUwBUAEEAVABFAEQAIABIAEUAUgBFAEEAQgBPAFYARQAgAEEATgBEACAASQBOACAAVABIAEUAIABBAFQAVABBAEMASABNAEUATgBUAC4AXABmADEAXABmAHMAMgA0AFwAcABhAHIADQAKAH0ADQAKAA==</value>
   </data>
-  <metadata name="$this.Name" xml:space="preserve">
-    <value>PurchaseContractXr_Xls</value>
-  </metadata>
 </root>

@@ -28,8 +28,7 @@ namespace xPort5.Order.PurchaseContract
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Gizmox.WebGUI.Common.Resources.IconResourceHandle iconResourceHandle1 = new Gizmox.WebGUI.Common.Resources.IconResourceHandle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseContractRecord));
             this.ansToolbar = new Gizmox.WebGUI.Forms.ToolBar();
             this.wspBottom = new Gizmox.WebGUI.Forms.Panel();
             this.wspBackground = new Gizmox.WebGUI.Forms.Panel();
@@ -67,36 +66,35 @@ namespace xPort5.Order.PurchaseContract
             this.lblDate = new Gizmox.WebGUI.Forms.Label();
             this.txtPCNumber = new Gizmox.WebGUI.Forms.TextBox();
             this.lblPCNumber = new Gizmox.WebGUI.Forms.Label();
-            this.toolTip1 = new Gizmox.WebGUI.Forms.ToolTip(this.components);
+            this.toolTip1 = new Gizmox.WebGUI.Forms.ToolTip();
+            this.clientStorage1 = new Gizmox.WebGUI.Forms.Client.ClientStorage();
+            this.wspBackground.SuspendLayout();
             this.SuspendLayout();
             // 
             // ansToolbar
             // 
-            this.ansToolbar.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
-            this.ansToolbar.Appearance = Gizmox.WebGUI.Forms.ToolBarAppearance.Normal;
-            this.ansToolbar.Dock = Gizmox.WebGUI.Forms.DockStyle.Top;
             this.ansToolbar.DragHandle = true;
-            this.ansToolbar.DropDownArrows = false;
-            this.ansToolbar.ImageList = null;
+            this.ansToolbar.DropDownArrows = true;
+            this.ansToolbar.ImageSize = new System.Drawing.Size(16, 16);
             this.ansToolbar.Location = new System.Drawing.Point(0, 0);
             this.ansToolbar.MenuHandle = true;
             this.ansToolbar.Name = "ansToolbar";
             this.ansToolbar.RightToLeft = Gizmox.WebGUI.Forms.RightToLeft.No;
             this.ansToolbar.ShowToolTips = true;
+            this.ansToolbar.Size = new System.Drawing.Size(100, 22);
             this.ansToolbar.TabIndex = 0;
             // 
             // wspBottom
             // 
-            this.wspBottom.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
             this.wspBottom.Dock = Gizmox.WebGUI.Forms.DockStyle.Fill;
-            this.wspBottom.Location = new System.Drawing.Point(0, 28);
+            this.wspBottom.Location = new System.Drawing.Point(0, 0);
+            this.wspBottom.Margin = new Gizmox.WebGUI.Forms.Padding(0, 300, 0, 0);
             this.wspBottom.Name = "wspBottom";
-            this.wspBottom.Size = new System.Drawing.Size(842, 587);
+            this.wspBottom.Size = new System.Drawing.Size(842, 615);
             this.wspBottom.TabIndex = 2;
             // 
             // wspBackground
             // 
-            this.wspBackground.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
             this.wspBackground.Controls.Add(this.lblRemarks_3);
             this.wspBackground.Controls.Add(this.txtRemarks3);
             this.wspBackground.Controls.Add(this.cboRemarks3);
@@ -135,6 +133,7 @@ namespace xPort5.Order.PurchaseContract
             this.wspBackground.DockPadding.All = 6;
             this.wspBackground.Location = new System.Drawing.Point(0, 28);
             this.wspBackground.Name = "wspBackground";
+            this.wspBackground.Padding = new Gizmox.WebGUI.Forms.Padding(6);
             this.wspBackground.Size = new System.Drawing.Size(842, 279);
             this.wspBackground.TabIndex = 1;
             // 
@@ -207,7 +206,6 @@ namespace xPort5.Order.PurchaseContract
             this.cboPricingTerms.Name = "cboPricingTerms";
             this.cboPricingTerms.Size = new System.Drawing.Size(297, 21);
             this.cboPricingTerms.TabIndex = 13;
-            this.cboPricingTerms.Text = "comboBox1";
             // 
             // lblDestination
             // 
@@ -322,7 +320,6 @@ namespace xPort5.Order.PurchaseContract
             this.cboPaymentTerms.Name = "cboPaymentTerms";
             this.cboPaymentTerms.Size = new System.Drawing.Size(297, 21);
             this.cboPaymentTerms.TabIndex = 13;
-            this.cboPaymentTerms.Text = "comboBox1";
             // 
             // lblTerms
             // 
@@ -334,7 +331,6 @@ namespace xPort5.Order.PurchaseContract
             // 
             // datPCDate
             // 
-            this.datPCDate.CalendarFirstDayOfWeek = Gizmox.WebGUI.Forms.Day.Default;
             this.datPCDate.CustomFormat = "dd/MM/yyyy";
             this.datPCDate.Format = Gizmox.WebGUI.Forms.DateTimePickerFormat.Custom;
             this.datPCDate.Location = new System.Drawing.Point(98, 31);
@@ -352,8 +348,7 @@ namespace xPort5.Order.PurchaseContract
             // 
             // cmdNextPCNumber
             // 
-            iconResourceHandle1.File = "16x16.lightbulb.png";
-            this.cmdNextPCNumber.Image = iconResourceHandle1;
+            this.cmdNextPCNumber.Image = new Gizmox.WebGUI.Common.Resources.IconResourceHandle(resources.GetString("cmdNextPCNumber.Image"));
             this.cmdNextPCNumber.Location = new System.Drawing.Point(371, 4);
             this.cmdNextPCNumber.Name = "cmdNextPCNumber";
             this.cmdNextPCNumber.Size = new System.Drawing.Size(24, 23);
@@ -427,15 +422,22 @@ namespace xPort5.Order.PurchaseContract
             this.lblPCNumber.TabIndex = 0;
             this.lblPCNumber.Text = "Contract No.:";
             // 
+            // clientStorage1
+            // 
+            this.clientStorage1.Description = "";
+            this.clientStorage1.MajorVersion = ((ushort)(1));
+            this.clientStorage1.MinorVersion = ((ushort)(0));
+            // 
             // PurchaseContractRecord
             // 
             this.Controls.Add(this.wspBackground);
-            this.Controls.Add(this.wspBottom);
             this.Controls.Add(this.ansToolbar);
+            this.Controls.Add(this.wspBottom);
             this.Size = new System.Drawing.Size(842, 615);
             this.StartPosition = Gizmox.WebGUI.Forms.FormStartPosition.CenterScreen;
             this.Text = "PurchaseContractRecord";
             this.Load += new System.EventHandler(this.PurchaseContractRecord_Load);
+            this.wspBackground.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -480,7 +482,6 @@ namespace xPort5.Order.PurchaseContract
         private Gizmox.WebGUI.Forms.Label lblRemarks_3;
         private Gizmox.WebGUI.Forms.TextBox txtRemarks3;
         private Gizmox.WebGUI.Forms.ComboBox cboRemarks3;
-
-
+        private Gizmox.WebGUI.Forms.Client.ClientStorage clientStorage1;
     }
 }
