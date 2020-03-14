@@ -247,7 +247,7 @@ namespace xPort5.Bot
         }
 
         /// <summary>
-        /// 2018.07.09 paulus:
+        /// 2020.03.15 paulus:
         /// 改用 Startup.cs 就要用喔個 function 嚟 initialize Swagger
         /// </summary>
         /// <param name="config"></param>
