@@ -924,6 +924,12 @@
     <Compile Include="Order\Invoice\Reports\InvoiceXrCharges.Designer.cs">
       <DependentUpon>InvoiceXrCharges.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order\Invoice\Reports\PackingListWithTotalQtyXr_Xls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Order\Invoice\Reports\PackingListWithTotalQtyXr_Xls.Designer.cs">
+      <DependentUpon>PackingListWithTotalQtyXr_Xls.cs</DependentUpon>
+    </Compile>
     <Compile Include="Order\Invoice\Reports\PackingListXr_Xls.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1797,6 +1803,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Order\Invoice\Reports\InvoiceXrCharges.resx">
       <DependentUpon>InvoiceXrCharges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\Invoice\Reports\PackingListWithTotalQtyXr_Xls.resx">
+      <DependentUpon>PackingListWithTotalQtyXr_Xls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Order\Invoice\Reports\PackingListXr_Xls.resx">
       <DependentUpon>PackingListXr_Xls.cs</DependentUpon>

@@ -72,6 +72,9 @@ namespace xPort5.Order.Invoice
                 case "shipment_advise":
                     xPort5.Controls.Reporting.XR.Loader.ShipmentAdvise(GetWhereValue());
                     break;
+                case "packing_listwithtotalqty_xls":
+                    xPort5.Controls.Reporting.XR.Loader.PackingListWithTotalQtyXls(GetWhereValue());
+                    break;
             }
         }
 

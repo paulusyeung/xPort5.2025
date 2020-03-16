@@ -8,5 +8,6 @@
     <Report Caption="Packing List - with One Shipping Mark" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Packing List - with One Shipping Mark" Tag="Packing_ListWithOneShippingMark" LastAccessedOn="" />
     <Report Caption="Shipment Advise" Image_ListView="48x48.pdf_48x48.gif" Image_CardView="48x48.pdf_48x48.gif" Image_Thumb="48x48.pdf_48x48.gif" Description="Shipment Advise" Tag="Shipment_Advise" LastAccessedOn="" />
     <Report Caption="Packing List" Image_ListView="48x48.excel_48x48.gif" Image_CardView="48x48.excel_48x48.gif" Image_Thumb="48x48.excel_48x48.gif" Description="Packing List in Excel format" Tag="Packing_List_Xls" LastAccessedOn="" />
+    <Report Caption="Packing List With Total Qty" Image_ListView="48x48.excel_48x48.gif" Image_CardView="48x48.excel_48x48.gif" Image_Thumb="48x48.excel_48x48.gif" Description="Packing List With Total Qty in Excel format" Tag="Packing_ListWithTotalQty_Xls" LastAccessedOn="" />
   </Reports>
 </root>
