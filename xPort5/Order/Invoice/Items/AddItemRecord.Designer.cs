@@ -28,12 +28,17 @@ namespace xPort5.Order.Invoice.Items
         /// </summary>
         private void InitializeComponent()
         {
-            Gizmox.WebGUI.Common.Resources.IconResourceHandle iconResourceHandle3 = new Gizmox.WebGUI.Common.Resources.IconResourceHandle();
-            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
-            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
-            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
-            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
-            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddItemRecord));
+            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
+            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
+            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
+            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
+            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
+            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
+            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
+            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
+            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
+            Gizmox.WebGUI.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new Gizmox.WebGUI.Forms.DataGridViewCellStyle();
             this.lblSCNumber = new Gizmox.WebGUI.Forms.Label();
             this.txtSCNumber = new Gizmox.WebGUI.Forms.TextBox();
             this.btnOK = new Gizmox.WebGUI.Forms.Button();
@@ -44,14 +49,14 @@ namespace xPort5.Order.Invoice.Items
             this.colOrderQTItemId = new Gizmox.WebGUI.Forms.DataGridViewTextBoxColumn();
             this.colLineNumber = new Gizmox.WebGUI.Forms.DataGridViewTextBoxColumn();
             this.colArticleCode = new Gizmox.WebGUI.Forms.DataGridViewTextBoxColumn();
+            this.colColor = new Gizmox.WebGUI.Forms.DataGridViewTextBoxColumn();
+            this.colCustRef = new Gizmox.WebGUI.Forms.DataGridViewTextBoxColumn();
             this.colOutstandingQty = new Gizmox.WebGUI.Forms.DataGridViewTextBoxColumn();
             this.colInvoicedQty = new Gizmox.WebGUI.Forms.DataGridViewTextBoxColumn();
             this.dgvShipmentList = new Gizmox.WebGUI.Forms.DataGridView();
             this.colScheduledDate = new Gizmox.WebGUI.Forms.DataGridViewTextBoxColumn();
             this.colOSQty = new Gizmox.WebGUI.Forms.DataGridViewTextBoxColumn();
             this.colThisShipment = new Gizmox.WebGUI.Forms.DataGridViewTextBoxColumn();
-            this.colColor = new Gizmox.WebGUI.Forms.DataGridViewTextBoxColumn();
-            this.colCustRef = new Gizmox.WebGUI.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQTList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShipmentList)).BeginInit();
             this.SuspendLayout();
@@ -92,8 +97,7 @@ namespace xPort5.Order.Invoice.Items
             // 
             // btnSearch
             // 
-            iconResourceHandle3.File = "16x16.16_find.gif";
-            this.btnSearch.Image = iconResourceHandle3;
+            this.btnSearch.Image = new Gizmox.WebGUI.Common.Resources.IconResourceHandle(resources.GetString("btnSearch.Image"));
             this.btnSearch.Location = new System.Drawing.Point(280, 11);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(33, 23);
@@ -113,7 +117,15 @@ namespace xPort5.Order.Invoice.Items
             // 
             this.dgvQTList.AllowUserToAddRows = false;
             this.dgvQTList.AllowUserToDeleteRows = false;
-            this.dgvQTList.BorderStyle = Gizmox.WebGUI.Forms.BorderStyle.FixedSingle;
+            dataGridViewCellStyle1.Alignment = Gizmox.WebGUI.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.FormatProvider = new System.Globalization.CultureInfo("en-US");
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = Gizmox.WebGUI.Forms.DataGridViewTriState.True;
+            this.dgvQTList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvQTList.Columns.AddRange(new Gizmox.WebGUI.Forms.DataGridViewColumn[] {
             this.colOrderQTItemId,
             this.colLineNumber,
@@ -126,7 +138,7 @@ namespace xPort5.Order.Invoice.Items
             this.dgvQTList.MultiSelect = false;
             this.dgvQTList.Name = "dgvQTList";
             this.dgvQTList.RowHeadersWidth = 5;
-            this.dgvQTList.RowTemplate.Height = 9;
+            this.dgvQTList.RowTemplate.Height = 23;
             this.dgvQTList.SelectionMode = Gizmox.WebGUI.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQTList.Size = new System.Drawing.Size(461, 204);
             this.dgvQTList.TabIndex = 8;
@@ -135,85 +147,96 @@ namespace xPort5.Order.Invoice.Items
             // 
             // colOrderQTItemId
             // 
-            this.colOrderQTItemId.AutoSizeMode = Gizmox.WebGUI.Forms.DataGridViewAutoSizeColumnMode.NotSet;
             this.colOrderQTItemId.DataPropertyName = "OrderSCItemsId";
+            this.colOrderQTItemId.DefaultCellStyle = dataGridViewCellStyle2;
             this.colOrderQTItemId.DefaultHeaderCellType = typeof(Gizmox.WebGUI.Forms.DataGridViewColumnHeaderCell);
-            this.colOrderQTItemId.MaxInputLength = -1;
             this.colOrderQTItemId.Name = "colOrderQTItemId";
             this.colOrderQTItemId.Resizable = Gizmox.WebGUI.Forms.DataGridViewTriState.True;
-            this.colOrderQTItemId.SortMode = Gizmox.WebGUI.Forms.DataGridViewColumnSortMode.Automatic;
             this.colOrderQTItemId.Visible = false;
-            this.colOrderQTItemId.Width = 100;
             // 
             // colLineNumber
             // 
-            this.colLineNumber.AutoSizeMode = Gizmox.WebGUI.Forms.DataGridViewAutoSizeColumnMode.NotSet;
             this.colLineNumber.DataPropertyName = "SCLineNo";
             this.colLineNumber.DefaultHeaderCellType = typeof(Gizmox.WebGUI.Forms.DataGridViewColumnHeaderCell);
             this.colLineNumber.FillWeight = 40F;
             this.colLineNumber.HeaderText = "#";
-            this.colLineNumber.MaxInputLength = -1;
             this.colLineNumber.Name = "colLineNumber";
             this.colLineNumber.ReadOnly = true;
             this.colLineNumber.Resizable = Gizmox.WebGUI.Forms.DataGridViewTriState.True;
-            this.colLineNumber.SortMode = Gizmox.WebGUI.Forms.DataGridViewColumnSortMode.Automatic;
             this.colLineNumber.Width = 40;
             // 
             // colArticleCode
             // 
-            this.colArticleCode.AutoSizeMode = Gizmox.WebGUI.Forms.DataGridViewAutoSizeColumnMode.NotSet;
             this.colArticleCode.DataPropertyName = "ArticleCode";
             this.colArticleCode.DefaultHeaderCellType = typeof(Gizmox.WebGUI.Forms.DataGridViewColumnHeaderCell);
             this.colArticleCode.HeaderText = "Article Code";
-            this.colArticleCode.MaxInputLength = -1;
             this.colArticleCode.Name = "colArticleCode";
             this.colArticleCode.ReadOnly = true;
             this.colArticleCode.Resizable = Gizmox.WebGUI.Forms.DataGridViewTriState.True;
-            this.colArticleCode.SortMode = Gizmox.WebGUI.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colArticleCode.Width = 100;
+            // 
+            // colColor
+            // 
+            this.colColor.DataPropertyName = "Color";
+            this.colColor.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colColor.DefaultHeaderCellType = typeof(Gizmox.WebGUI.Forms.DataGridViewColumnHeaderCell);
+            this.colColor.HeaderText = "Color";
+            this.colColor.Name = "colColor";
+            this.colColor.ReadOnly = true;
+            this.colColor.Resizable = Gizmox.WebGUI.Forms.DataGridViewTriState.True;
+            // 
+            // colCustRef
+            // 
+            this.colCustRef.DataPropertyName = "CustRef";
+            this.colCustRef.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colCustRef.DefaultHeaderCellType = typeof(Gizmox.WebGUI.Forms.DataGridViewColumnHeaderCell);
+            this.colCustRef.Name = "colCustRef";
+            this.colCustRef.ReadOnly = true;
+            this.colCustRef.Resizable = Gizmox.WebGUI.Forms.DataGridViewTriState.True;
             // 
             // colOutstandingQty
             // 
-            this.colOutstandingQty.AutoSizeMode = Gizmox.WebGUI.Forms.DataGridViewAutoSizeColumnMode.NotSet;
             this.colOutstandingQty.DataPropertyName = "OSQty";
-            dataGridViewCellStyle11.Alignment = Gizmox.WebGUI.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Format = "#,###0";
-            dataGridViewCellStyle11.FormatProvider = new System.Globalization.CultureInfo("en-US");
-            dataGridViewCellStyle11.NullValue = "0";
-            this.colOutstandingQty.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = Gizmox.WebGUI.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "#,###0";
+            dataGridViewCellStyle5.FormatProvider = new System.Globalization.CultureInfo("en-US");
+            dataGridViewCellStyle5.NullValue = "0";
+            this.colOutstandingQty.DefaultCellStyle = dataGridViewCellStyle5;
             this.colOutstandingQty.DefaultHeaderCellType = typeof(Gizmox.WebGUI.Forms.DataGridViewColumnHeaderCell);
             this.colOutstandingQty.FillWeight = 80F;
             this.colOutstandingQty.HeaderText = "O/S Qty";
-            this.colOutstandingQty.MaxInputLength = -1;
             this.colOutstandingQty.Name = "colOutstandingQty";
             this.colOutstandingQty.ReadOnly = true;
             this.colOutstandingQty.Resizable = Gizmox.WebGUI.Forms.DataGridViewTriState.True;
-            this.colOutstandingQty.SortMode = Gizmox.WebGUI.Forms.DataGridViewColumnSortMode.Automatic;
             this.colOutstandingQty.Width = 80;
             // 
             // colInvoicedQty
             // 
-            this.colInvoicedQty.AutoSizeMode = Gizmox.WebGUI.Forms.DataGridViewAutoSizeColumnMode.NotSet;
             this.colInvoicedQty.DataPropertyName = "InvoicedQty";
-            dataGridViewCellStyle12.Alignment = Gizmox.WebGUI.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.Format = "#,###0";
-            dataGridViewCellStyle12.FormatProvider = new System.Globalization.CultureInfo("en-US");
-            dataGridViewCellStyle12.NullValue = "0";
-            this.colInvoicedQty.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = Gizmox.WebGUI.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "#,###0";
+            dataGridViewCellStyle6.FormatProvider = new System.Globalization.CultureInfo("en-US");
+            dataGridViewCellStyle6.NullValue = "0";
+            this.colInvoicedQty.DefaultCellStyle = dataGridViewCellStyle6;
             this.colInvoicedQty.DefaultHeaderCellType = typeof(Gizmox.WebGUI.Forms.DataGridViewColumnHeaderCell);
             this.colInvoicedQty.FillWeight = 80F;
             this.colInvoicedQty.HeaderText = "Invoiced Qty";
-            this.colInvoicedQty.MaxInputLength = -1;
             this.colInvoicedQty.Name = "colInvoicedQty";
             this.colInvoicedQty.Resizable = Gizmox.WebGUI.Forms.DataGridViewTriState.True;
-            this.colInvoicedQty.SortMode = Gizmox.WebGUI.Forms.DataGridViewColumnSortMode.Automatic;
             this.colInvoicedQty.Width = 80;
             // 
             // dgvShipmentList
             // 
             this.dgvShipmentList.AllowUserToAddRows = false;
             this.dgvShipmentList.AllowUserToDeleteRows = false;
-            this.dgvShipmentList.BorderStyle = Gizmox.WebGUI.Forms.BorderStyle.FixedSingle;
+            dataGridViewCellStyle7.Alignment = Gizmox.WebGUI.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.FormatProvider = new System.Globalization.CultureInfo("en-US");
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = Gizmox.WebGUI.Forms.DataGridViewTriState.True;
+            this.dgvShipmentList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvShipmentList.Columns.AddRange(new Gizmox.WebGUI.Forms.DataGridViewColumn[] {
             this.colScheduledDate,
             this.colOSQty,
@@ -221,7 +244,7 @@ namespace xPort5.Order.Invoice.Items
             this.dgvShipmentList.Location = new System.Drawing.Point(12, 287);
             this.dgvShipmentList.Name = "dgvShipmentList";
             this.dgvShipmentList.RowHeadersWidth = 5;
-            this.dgvShipmentList.RowTemplate.Height = 9;
+            this.dgvShipmentList.RowTemplate.Height = 23;
             this.dgvShipmentList.Size = new System.Drawing.Size(461, 120);
             this.dgvShipmentList.TabIndex = 9;
             this.dgvShipmentList.UseInternalPaging = false;
@@ -229,80 +252,43 @@ namespace xPort5.Order.Invoice.Items
             // 
             // colScheduledDate
             // 
-            this.colScheduledDate.AutoSizeMode = Gizmox.WebGUI.Forms.DataGridViewAutoSizeColumnMode.NotSet;
             this.colScheduledDate.DataPropertyName = "ShippedOn";
-            dataGridViewCellStyle13.Format = "dd/MM/yyyy";
-            dataGridViewCellStyle13.FormatProvider = new System.Globalization.CultureInfo("en-US");
-            dataGridViewCellStyle13.NullValue = null;
-            this.colScheduledDate.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle8.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle8.FormatProvider = new System.Globalization.CultureInfo("en-US");
+            dataGridViewCellStyle8.NullValue = null;
+            this.colScheduledDate.DefaultCellStyle = dataGridViewCellStyle8;
             this.colScheduledDate.DefaultHeaderCellType = typeof(Gizmox.WebGUI.Forms.DataGridViewColumnHeaderCell);
             this.colScheduledDate.HeaderText = "Scheduled Date";
-            this.colScheduledDate.MaxInputLength = -1;
             this.colScheduledDate.Name = "colScheduledDate";
             this.colScheduledDate.ReadOnly = true;
             this.colScheduledDate.Resizable = Gizmox.WebGUI.Forms.DataGridViewTriState.True;
-            this.colScheduledDate.SortMode = Gizmox.WebGUI.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colScheduledDate.Width = 100;
             // 
             // colOSQty
             // 
-            this.colOSQty.AutoSizeMode = Gizmox.WebGUI.Forms.DataGridViewAutoSizeColumnMode.NotSet;
             this.colOSQty.DataPropertyName = "OSQty";
-            dataGridViewCellStyle14.Alignment = Gizmox.WebGUI.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle14.Format = "#,###0";
-            dataGridViewCellStyle14.FormatProvider = new System.Globalization.CultureInfo("en-US");
-            dataGridViewCellStyle14.NullValue = "0";
-            this.colOSQty.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle9.Alignment = Gizmox.WebGUI.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Format = "#,###0";
+            dataGridViewCellStyle9.FormatProvider = new System.Globalization.CultureInfo("en-US");
+            dataGridViewCellStyle9.NullValue = "0";
+            this.colOSQty.DefaultCellStyle = dataGridViewCellStyle9;
             this.colOSQty.DefaultHeaderCellType = typeof(Gizmox.WebGUI.Forms.DataGridViewColumnHeaderCell);
             this.colOSQty.HeaderText = "O/S Qty";
-            this.colOSQty.MaxInputLength = -1;
             this.colOSQty.Name = "colOSQty";
             this.colOSQty.ReadOnly = true;
             this.colOSQty.Resizable = Gizmox.WebGUI.Forms.DataGridViewTriState.True;
-            this.colOSQty.SortMode = Gizmox.WebGUI.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colOSQty.Width = 100;
             // 
             // colThisShipment
             // 
-            this.colThisShipment.AutoSizeMode = Gizmox.WebGUI.Forms.DataGridViewAutoSizeColumnMode.NotSet;
             this.colThisShipment.DataPropertyName = "ThisShipment";
-            dataGridViewCellStyle15.Alignment = Gizmox.WebGUI.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.Format = "#,###0";
-            dataGridViewCellStyle15.FormatProvider = new System.Globalization.CultureInfo("en-US");
-            dataGridViewCellStyle15.NullValue = "0";
-            this.colThisShipment.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle10.Alignment = Gizmox.WebGUI.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "#,###0";
+            dataGridViewCellStyle10.FormatProvider = new System.Globalization.CultureInfo("en-US");
+            dataGridViewCellStyle10.NullValue = "0";
+            this.colThisShipment.DefaultCellStyle = dataGridViewCellStyle10;
             this.colThisShipment.DefaultHeaderCellType = typeof(Gizmox.WebGUI.Forms.DataGridViewColumnHeaderCell);
             this.colThisShipment.HeaderText = "This Shipment";
-            this.colThisShipment.MaxInputLength = -1;
             this.colThisShipment.Name = "colThisShipment";
             this.colThisShipment.Resizable = Gizmox.WebGUI.Forms.DataGridViewTriState.True;
-            this.colThisShipment.SortMode = Gizmox.WebGUI.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colThisShipment.Width = 100;
-            // 
-            // colColor
-            // 
-            this.colColor.AutoSizeMode = Gizmox.WebGUI.Forms.DataGridViewAutoSizeColumnMode.NotSet;
-            this.colColor.DataPropertyName = "Color";
-            this.colColor.DefaultHeaderCellType = typeof(Gizmox.WebGUI.Forms.DataGridViewColumnHeaderCell);
-            this.colColor.HeaderText = "Color";
-            this.colColor.MaxInputLength = -1;
-            this.colColor.Name = "colColor";
-            this.colColor.ReadOnly = true;
-            this.colColor.Resizable = Gizmox.WebGUI.Forms.DataGridViewTriState.True;
-            this.colColor.SortMode = Gizmox.WebGUI.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colColor.Width = 100;
-            // 
-            // colCustRef
-            // 
-            this.colCustRef.AutoSizeMode = Gizmox.WebGUI.Forms.DataGridViewAutoSizeColumnMode.NotSet;
-            this.colCustRef.DataPropertyName = "CustRef";
-            this.colCustRef.DefaultHeaderCellType = typeof(Gizmox.WebGUI.Forms.DataGridViewColumnHeaderCell);
-            this.colCustRef.MaxInputLength = -1;
-            this.colCustRef.Name = "colCustRef";
-            this.colCustRef.ReadOnly = true;
-            this.colCustRef.Resizable = Gizmox.WebGUI.Forms.DataGridViewTriState.True;
-            this.colCustRef.SortMode = Gizmox.WebGUI.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colCustRef.Width = 100;
             // 
             // AddItemRecord
             // 
