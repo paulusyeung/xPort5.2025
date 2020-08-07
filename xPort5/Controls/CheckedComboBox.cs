@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Data;
 using System.Configuration;
 using Gizmox.WebGUI.Forms;
@@ -40,8 +40,21 @@ namespace xPort5.Controls
         }
         private void OnMouseDown(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Right)
+            if (e.Button == MouseButtons.Right)
+            {
                 this.Close();
+            }
+            else
+            {
+                // 2020.08.08 paulus: 淨係 OnItemCheck 唔夠，要包埋啱啱 check 嘅 item，好似重複咗，不過 OnItemCheck 可以用 keyboard
+                mobjParent.Text = "";
+                foreach (int i in objCheckedComboView.CheckedIndices)
+                {
+                    if (mobjParent.Text != string.Empty)
+                        mobjParent.Text += "; ";
+                    mobjParent.Text += objCheckedComboView.Items[i].ToString();
+                }
+            }
         }
         private void OnClose(object sender, EventArgs e)
         {

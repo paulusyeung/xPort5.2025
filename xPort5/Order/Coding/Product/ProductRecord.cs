@@ -264,7 +264,7 @@ namespace xPort5.Order.Coding.Product
                 txtDescription.Text = item.ArticleName;
                 txtBarcode.Text = item.Barcode;
                 txtRemarks.Text = item.Remarks;
-                cboColor.Text = item.ColorPattern;
+                //cboColor.Text = item.ColorPattern;
 
                 xPort5.Controls.CheckedComboBoxView list = cboColor.GetCheckedComboView();
 
@@ -299,6 +299,8 @@ namespace xPort5.Order.Coding.Product
                         }
                     }
                 }
+
+                cboColor.Text = item.ColorPattern;
                 #endregion
 
                 T_Origin oOrigin = T_Origin.Load(item.OriginId);
