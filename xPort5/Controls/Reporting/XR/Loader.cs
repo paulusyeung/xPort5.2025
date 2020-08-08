@@ -388,6 +388,29 @@ namespace xPort5.Controls.Reporting.XR
             //}
         }
 
+        public static void InvoiceXls(string INNumber)
+        {
+            if (INNumber != string.Empty)
+            {
+                DataTable dt = DataSource.Invoice(INNumber);
+
+                xPort5.Order.Invoice.Reports.InvoiceXr_Xls report = new xPort5.Order.Invoice.Reports.InvoiceXr_Xls();
+                report.DataSource = dt;
+                report.CreateDocument();
+
+                System.IO.MemoryStream memStream = new System.IO.MemoryStream();
+                report.ExportToXls(memStream);
+
+                xPort5.Controls.Reporting.XR.Viewer view = new xPort5.Controls.Reporting.XR.Viewer();
+                view.ReportName = "Invoice.xls";
+                view.BinarySource = memStream;
+                view.ReportFormat = "excel";
+                view.Show();
+
+                xPort5.Controls.Log4net.LogInfo(xPort5.Controls.Log4net.LogAction.Print, String.Format("{0} {1}", MethodBase.GetCurrentMethod().Name, INNumber));
+            }
+        }
+
         public static void PackingList(string INNumber)
         {
             if (INNumber != string.Empty)

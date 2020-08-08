@@ -60,11 +60,13 @@ namespace xPort5.Order.Invoice.Reports
             this.txtINDate = new DevExpress.XtraReports.UI.XRRichText();
             this.txtINNumber = new DevExpress.XtraReports.UI.XRRichText();
             this.GroupHeader3 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-            this.txtRemarks = new DevExpress.XtraReports.UI.XRRichText();
-            this.txtBoardDate = new DevExpress.XtraReports.UI.XRRichText();
-            this.txtCarrier = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
+            this.txtCarrier = new DevExpress.XtraReports.UI.XRRichText();
+            this.txtBoardDate = new DevExpress.XtraReports.UI.XRRichText();
+            this.txtRemarks = new DevExpress.XtraReports.UI.XRRichText();
+            this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             ((System.ComponentModel.ISupportInitialize)(this.txtArticleCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtColor)).BeginInit();
@@ -76,9 +78,9 @@ namespace xPort5.Order.Invoice.Reports
             ((System.ComponentModel.ISupportInitialize)(this.txtCustName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtINDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtINNumber)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRemarks)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBoardDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCarrier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBoardDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRemarks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -94,115 +96,120 @@ namespace xPort5.Order.Invoice.Reports
             this.txtUnit,
             this.txtArticleName,
             this.txtShippingMark});
-            this.Detail.Height = 90;
+            this.Detail.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.Detail.HeightF = 90F;
             this.Detail.Name = "Detail";
-            this.Detail.ParentStyleUsing.UseFont = false;
+            this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.Detail.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.Detail_BeforePrint);
             // 
             // txtWeightNet
             // 
             this.txtWeightNet.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtWeightNet.Location = new System.Drawing.Point(684, 0);
+            this.txtWeightNet.LocationFloat = new DevExpress.Utils.PointFloat(684F, 0F);
             this.txtWeightNet.Name = "txtWeightNet";
             this.txtWeightNet.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.txtWeightNet.ParentStyleUsing.UseFont = false;
-            this.txtWeightNet.Size = new System.Drawing.Size(67, 17);
+            this.txtWeightNet.SizeF = new System.Drawing.SizeF(67F, 17F);
             this.txtWeightNet.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // txtWeightGross
             // 
             this.txtWeightGross.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtWeightGross.Location = new System.Drawing.Point(622, 0);
+            this.txtWeightGross.LocationFloat = new DevExpress.Utils.PointFloat(622F, 0F);
             this.txtWeightGross.Name = "txtWeightGross";
             this.txtWeightGross.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.txtWeightGross.ParentStyleUsing.UseFont = false;
-            this.txtWeightGross.Size = new System.Drawing.Size(62, 17);
+            this.txtWeightGross.SizeF = new System.Drawing.SizeF(62F, 17F);
             this.txtWeightGross.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // txtQty
             // 
             this.txtQty.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtQty.Location = new System.Drawing.Point(442, 0);
+            this.txtQty.LocationFloat = new DevExpress.Utils.PointFloat(442F, 0F);
             this.txtQty.Name = "txtQty";
             this.txtQty.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.txtQty.ParentStyleUsing.UseFont = false;
-            this.txtQty.Size = new System.Drawing.Size(40, 17);
+            this.txtQty.SizeF = new System.Drawing.SizeF(40F, 17F);
             this.txtQty.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLine1
             // 
-            this.xrLine1.Location = new System.Drawing.Point(108, 77);
+            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(108F, 77F);
             this.xrLine1.Name = "xrLine1";
-            this.xrLine1.Size = new System.Drawing.Size(642, 9);
+            this.xrLine1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLine1.SizeF = new System.Drawing.SizeF(642F, 9F);
             // 
             // txtArticleCode
             // 
             this.txtArticleCode.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtArticleCode.Location = new System.Drawing.Point(242, 0);
+            this.txtArticleCode.LocationFloat = new DevExpress.Utils.PointFloat(242F, 0F);
             this.txtArticleCode.Name = "txtArticleCode";
-            this.txtArticleCode.ParentStyleUsing.UseFont = false;
-            this.txtArticleCode.Size = new System.Drawing.Size(200, 17);
+            this.txtArticleCode.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.txtArticleCode.SizeF = new System.Drawing.SizeF(200F, 17F);
             // 
             // txtSize
             // 
             this.txtSize.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtSize.Location = new System.Drawing.Point(522, 0);
+            this.txtSize.LocationFloat = new DevExpress.Utils.PointFloat(522F, 0F);
             this.txtSize.Name = "txtSize";
-            this.txtSize.ParentStyleUsing.UseFont = false;
-            this.txtSize.Size = new System.Drawing.Size(100, 17);
+            this.txtSize.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.txtSize.SizeF = new System.Drawing.SizeF(100F, 17F);
             // 
             // txtColor
             // 
             this.txtColor.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtColor.Location = new System.Drawing.Point(242, 57);
+            this.txtColor.LocationFloat = new DevExpress.Utils.PointFloat(242F, 57F);
             this.txtColor.Name = "txtColor";
-            this.txtColor.ParentStyleUsing.UseFont = false;
-            this.txtColor.Size = new System.Drawing.Size(200, 20);
+            this.txtColor.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.txtColor.SizeF = new System.Drawing.SizeF(200F, 20F);
             // 
             // txtUnit
             // 
             this.txtUnit.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUnit.Location = new System.Drawing.Point(482, 0);
+            this.txtUnit.LocationFloat = new DevExpress.Utils.PointFloat(482F, 0F);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.txtUnit.ParentStyleUsing.UseFont = false;
-            this.txtUnit.Size = new System.Drawing.Size(40, 17);
+            this.txtUnit.SizeF = new System.Drawing.SizeF(40F, 17F);
+            this.txtUnit.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // txtArticleName
             // 
             this.txtArticleName.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtArticleName.Location = new System.Drawing.Point(242, 17);
+            this.txtArticleName.LocationFloat = new DevExpress.Utils.PointFloat(242F, 17F);
             this.txtArticleName.Name = "txtArticleName";
-            this.txtArticleName.ParentStyleUsing.UseFont = false;
-            this.txtArticleName.Size = new System.Drawing.Size(200, 40);
+            this.txtArticleName.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.txtArticleName.SizeF = new System.Drawing.SizeF(200F, 40F);
             // 
             // txtShippingMark
             // 
             this.txtShippingMark.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtShippingMark.Location = new System.Drawing.Point(0, 0);
+            this.txtShippingMark.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.txtShippingMark.Name = "txtShippingMark";
-            this.txtShippingMark.ParentStyleUsing.UseFont = false;
-            this.txtShippingMark.Size = new System.Drawing.Size(108, 25);
+            this.txtShippingMark.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.txtShippingMark.SizeF = new System.Drawing.SizeF(108F, 25F);
             // 
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.txtHeader});
+            this.PageHeader.HeightF = 100F;
             this.PageHeader.Name = "PageHeader";
+            this.PageHeader.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.PageHeader.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // txtHeader
             // 
             this.txtHeader.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtHeader.Location = new System.Drawing.Point(0, 0);
+            this.txtHeader.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.txtHeader.Name = "txtHeader";
-            this.txtHeader.ParentStyleUsing.UseFont = false;
-            this.txtHeader.Size = new System.Drawing.Size(750, 100);
+            this.txtHeader.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.txtHeader.SizeF = new System.Drawing.SizeF(750F, 100F);
             this.txtHeader.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.txtHeader_BeforePrint);
             // 
             // PageFooter
             // 
-            this.PageFooter.Height = 0;
+            this.PageFooter.HeightF = 0F;
             this.PageFooter.Name = "PageFooter";
+            this.PageFooter.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.PageFooter.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // GroupHeader1
             // 
@@ -219,160 +226,160 @@ namespace xPort5.Order.Invoice.Reports
             this.xrLabel7,
             this.xrLabel2,
             this.txt});
-            this.GroupHeader1.Height = 42;
+            this.GroupHeader1.HeightF = 42F;
             this.GroupHeader1.Name = "GroupHeader1";
+            this.GroupHeader1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.GroupHeader1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel16
             // 
             this.xrLabel16.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel16.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel16.Location = new System.Drawing.Point(622, 18);
+            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(622F, 18F);
             this.xrLabel16.Name = "xrLabel16";
             this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel16.ParentStyleUsing.UseBorders = false;
-            this.xrLabel16.ParentStyleUsing.UseFont = false;
-            this.xrLabel16.Size = new System.Drawing.Size(62, 20);
+            this.xrLabel16.SizeF = new System.Drawing.SizeF(62F, 20F);
             this.xrLabel16.Text = "IN KGS";
+            this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel14
             // 
             this.xrLabel14.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel14.Location = new System.Drawing.Point(684, 18);
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(684F, 18F);
             this.xrLabel14.Name = "xrLabel14";
             this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel14.ParentStyleUsing.UseBorders = false;
-            this.xrLabel14.ParentStyleUsing.UseFont = false;
-            this.xrLabel14.Size = new System.Drawing.Size(67, 20);
+            this.xrLabel14.SizeF = new System.Drawing.SizeF(67F, 20F);
             this.xrLabel14.Text = "IN KGS";
+            this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel13
             // 
             this.xrLabel13.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel13.Location = new System.Drawing.Point(522, 18);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(522F, 18F);
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel13.ParentStyleUsing.UseBorders = false;
-            this.xrLabel13.ParentStyleUsing.UseFont = false;
-            this.xrLabel13.Size = new System.Drawing.Size(100, 20);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(100F, 20F);
             this.xrLabel13.Text = "IN CM";
+            this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel12
             // 
             this.xrLabel12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel12.Location = new System.Drawing.Point(117, 18);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(117F, 18F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel12.ParentStyleUsing.UseFont = false;
-            this.xrLabel12.Size = new System.Drawing.Size(41, 20);
+            this.xrLabel12.SizeF = new System.Drawing.SizeF(41F, 20F);
             this.xrLabel12.Text = "NO.";
+            this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel1
             // 
             this.xrLabel1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel1.Location = new System.Drawing.Point(684, 0);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(684F, 0F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.ParentStyleUsing.UseFont = false;
-            this.xrLabel1.Size = new System.Drawing.Size(67, 18);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(67F, 18F);
             this.xrLabel1.Text = "N.W.";
+            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel11
             // 
             this.xrLabel11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel11.Location = new System.Drawing.Point(622, 0);
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(622F, 0F);
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel11.ParentStyleUsing.UseFont = false;
-            this.xrLabel11.Size = new System.Drawing.Size(62, 18);
+            this.xrLabel11.SizeF = new System.Drawing.SizeF(62F, 18F);
             this.xrLabel11.Text = "G.W.";
+            this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel10
             // 
             this.xrLabel10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel10.Location = new System.Drawing.Point(522, 0);
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(522F, 0F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel10.ParentStyleUsing.UseFont = false;
-            this.xrLabel10.Size = new System.Drawing.Size(100, 18);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(100F, 18F);
             this.xrLabel10.Text = "MEAS.";
+            this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel9
             // 
             this.xrLabel9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel9.Location = new System.Drawing.Point(442, 18);
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(442F, 18F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel9.ParentStyleUsing.UseFont = false;
-            this.xrLabel9.Size = new System.Drawing.Size(80, 20);
+            this.xrLabel9.SizeF = new System.Drawing.SizeF(80F, 20F);
             this.xrLabel9.Text = "QTY/PKG";
+            this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel8
             // 
             this.xrLabel8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel8.Location = new System.Drawing.Point(242, 18);
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(242F, 18F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel8.ParentStyleUsing.UseFont = false;
-            this.xrLabel8.Size = new System.Drawing.Size(183, 20);
+            this.xrLabel8.SizeF = new System.Drawing.SizeF(183F, 20F);
             this.xrLabel8.Text = "DESCRIPTION OF GOODS";
+            this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel7
             // 
             this.xrLabel7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel7.Location = new System.Drawing.Point(158, 18);
+            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(158F, 18F);
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel7.ParentStyleUsing.UseFont = false;
-            this.xrLabel7.Size = new System.Drawing.Size(84, 20);
+            this.xrLabel7.SizeF = new System.Drawing.SizeF(84F, 20F);
             this.xrLabel7.Text = "NO. OF PK";
+            this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel2
             // 
             this.xrLabel2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel2.Location = new System.Drawing.Point(117, 0);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(117F, 0F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel2.ParentStyleUsing.UseFont = false;
-            this.xrLabel2.Size = new System.Drawing.Size(41, 18);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(41F, 18F);
             this.xrLabel2.Text = "CTN.";
+            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // txt
             // 
             this.txt.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.txt.Location = new System.Drawing.Point(0, 18);
+            this.txt.LocationFloat = new DevExpress.Utils.PointFloat(0F, 18F);
             this.txt.Name = "txt";
             this.txt.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.txt.ParentStyleUsing.UseFont = false;
-            this.txt.Size = new System.Drawing.Size(117, 20);
+            this.txt.SizeF = new System.Drawing.SizeF(117F, 20F);
             this.txt.Text = "MARKS & NOS.";
+            this.txt.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // GroupHeader2
             // 
             this.GroupHeader2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.txtNo});
-            this.GroupHeader2.Height = 22;
+            this.GroupHeader2.HeightF = 22F;
             this.GroupHeader2.Level = 1;
             this.GroupHeader2.Name = "GroupHeader2";
+            this.GroupHeader2.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.GroupHeader2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.GroupHeader2.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.GroupHeader2_BeforePrint);
             // 
             // txtNo
             // 
             this.txtNo.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtNo.Location = new System.Drawing.Point(17, 0);
+            this.txtNo.LocationFloat = new DevExpress.Utils.PointFloat(17F, 0F);
             this.txtNo.Name = "txtNo";
-            this.txtNo.ParentStyleUsing.UseFont = false;
-            this.txtNo.Size = new System.Drawing.Size(366, 20);
+            this.txtNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.txtNo.SizeF = new System.Drawing.SizeF(366F, 20F);
             // 
             // xrLabel5
             // 
             this.xrLabel5.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.xrLabel5.Location = new System.Drawing.Point(0, 0);
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel5.ParentStyleUsing.UseFont = false;
-            this.xrLabel5.Size = new System.Drawing.Size(750, 33);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(750F, 33F);
             this.xrLabel5.Text = "PACKING LIST";
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
@@ -380,54 +387,54 @@ namespace xPort5.Order.Invoice.Reports
             // 
             this.txtCustAddr.CanGrow = false;
             this.txtCustAddr.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtCustAddr.Location = new System.Drawing.Point(17, 62);
+            this.txtCustAddr.LocationFloat = new DevExpress.Utils.PointFloat(17F, 62F);
             this.txtCustAddr.Name = "txtCustAddr";
-            this.txtCustAddr.ParentStyleUsing.UseFont = false;
-            this.txtCustAddr.Size = new System.Drawing.Size(366, 66);
+            this.txtCustAddr.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.txtCustAddr.SizeF = new System.Drawing.SizeF(366F, 66F);
             // 
             // txtCustName
             // 
             this.txtCustName.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtCustName.Location = new System.Drawing.Point(17, 42);
+            this.txtCustName.LocationFloat = new DevExpress.Utils.PointFloat(17F, 42F);
             this.txtCustName.Name = "txtCustName";
-            this.txtCustName.ParentStyleUsing.UseFont = false;
-            this.txtCustName.Size = new System.Drawing.Size(366, 20);
+            this.txtCustName.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.txtCustName.SizeF = new System.Drawing.SizeF(366F, 20F);
             // 
             // xrLabel3
             // 
             this.xrLabel3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel3.Location = new System.Drawing.Point(425, 42);
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(425F, 42F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel3.ParentStyleUsing.UseFont = false;
-            this.xrLabel3.Size = new System.Drawing.Size(133, 20);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(133F, 20F);
             this.xrLabel3.Text = "PACKING LIST NO.";
+            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel4
             // 
             this.xrLabel4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel4.Location = new System.Drawing.Point(425, 62);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(425F, 62F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel4.ParentStyleUsing.UseFont = false;
-            this.xrLabel4.Size = new System.Drawing.Size(133, 20);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(133F, 20F);
             this.xrLabel4.Text = "DATE";
+            this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // txtINDate
             // 
             this.txtINDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtINDate.Location = new System.Drawing.Point(558, 62);
+            this.txtINDate.LocationFloat = new DevExpress.Utils.PointFloat(558F, 62F);
             this.txtINDate.Name = "txtINDate";
-            this.txtINDate.ParentStyleUsing.UseFont = false;
-            this.txtINDate.Size = new System.Drawing.Size(192, 20);
+            this.txtINDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.txtINDate.SizeF = new System.Drawing.SizeF(192F, 20F);
             // 
             // txtINNumber
             // 
             this.txtINNumber.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtINNumber.Location = new System.Drawing.Point(558, 42);
+            this.txtINNumber.LocationFloat = new DevExpress.Utils.PointFloat(558F, 42F);
             this.txtINNumber.Name = "txtINNumber";
-            this.txtINNumber.ParentStyleUsing.UseFont = false;
-            this.txtINNumber.Size = new System.Drawing.Size(192, 20);
+            this.txtINNumber.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.txtINNumber.SizeF = new System.Drawing.SizeF(192F, 20F);
             // 
             // GroupHeader3
             // 
@@ -444,60 +451,72 @@ namespace xPort5.Order.Invoice.Reports
             this.xrLabel4,
             this.txtINDate,
             this.xrLabel5});
-            this.GroupHeader3.Height = 146;
+            this.GroupHeader3.HeightF = 146F;
             this.GroupHeader3.Level = 2;
             this.GroupHeader3.Name = "GroupHeader3";
+            this.GroupHeader3.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.GroupHeader3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.GroupHeader3.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.GroupHeader3_BeforePrint);
             // 
-            // txtRemarks
+            // xrLabel15
             // 
-            this.txtRemarks.CanShrink = true;
-            this.txtRemarks.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRemarks.Location = new System.Drawing.Point(558, 125);
-            this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.ParentStyleUsing.UseFont = false;
-            this.txtRemarks.RtfText = ((DevExpress.XtraReports.UI.SerializableString)(resources.GetObject("txtRemarks.RtfText")));
-            this.txtRemarks.Size = new System.Drawing.Size(192, 20);
+            this.xrLabel15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(425F, 83F);
+            this.xrLabel15.Name = "xrLabel15";
+            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(133F, 20F);
+            this.xrLabel15.Text = "Carrier";
+            this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // txtBoardDate
+            // xrLabel17
             // 
-            this.txtBoardDate.CanGrow = false;
-            this.txtBoardDate.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtBoardDate.Location = new System.Drawing.Point(558, 104);
-            this.txtBoardDate.Name = "txtBoardDate";
-            this.txtBoardDate.ParentStyleUsing.UseFont = false;
-            this.txtBoardDate.RtfText = ((DevExpress.XtraReports.UI.SerializableString)(resources.GetObject("txtBoardDate.RtfText")));
-            this.txtBoardDate.Size = new System.Drawing.Size(192, 20);
+            this.xrLabel17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(425F, 104F);
+            this.xrLabel17.Name = "xrLabel17";
+            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel17.SizeF = new System.Drawing.SizeF(133F, 20F);
+            this.xrLabel17.Text = "On Board Date";
+            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // txtCarrier
             // 
             this.txtCarrier.CanGrow = false;
             this.txtCarrier.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCarrier.Location = new System.Drawing.Point(558, 83);
+            this.txtCarrier.LocationFloat = new DevExpress.Utils.PointFloat(558F, 83F);
             this.txtCarrier.Name = "txtCarrier";
-            this.txtCarrier.ParentStyleUsing.UseFont = false;
-            this.txtCarrier.RtfText = ((DevExpress.XtraReports.UI.SerializableString)(resources.GetObject("txtCarrier.RtfText")));
-            this.txtCarrier.Size = new System.Drawing.Size(192, 20);
+            this.txtCarrier.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.txtCarrier.SerializableRtfString = resources.GetString("txtCarrier.SerializableRtfString");
+            this.txtCarrier.SizeF = new System.Drawing.SizeF(192F, 20F);
             // 
-            // xrLabel17
+            // txtBoardDate
             // 
-            this.xrLabel17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel17.Location = new System.Drawing.Point(425, 104);
-            this.xrLabel17.Name = "xrLabel17";
-            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel17.ParentStyleUsing.UseFont = false;
-            this.xrLabel17.Size = new System.Drawing.Size(133, 20);
-            this.xrLabel17.Text = "On Board Date";
+            this.txtBoardDate.CanGrow = false;
+            this.txtBoardDate.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.txtBoardDate.LocationFloat = new DevExpress.Utils.PointFloat(558F, 104F);
+            this.txtBoardDate.Name = "txtBoardDate";
+            this.txtBoardDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.txtBoardDate.SerializableRtfString = resources.GetString("txtBoardDate.SerializableRtfString");
+            this.txtBoardDate.SizeF = new System.Drawing.SizeF(192F, 20F);
             // 
-            // xrLabel15
+            // txtRemarks
             // 
-            this.xrLabel15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel15.Location = new System.Drawing.Point(425, 83);
-            this.xrLabel15.Name = "xrLabel15";
-            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel15.ParentStyleUsing.UseFont = false;
-            this.xrLabel15.Size = new System.Drawing.Size(133, 20);
-            this.xrLabel15.Text = "Carrier";
+            this.txtRemarks.CanShrink = true;
+            this.txtRemarks.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRemarks.LocationFloat = new DevExpress.Utils.PointFloat(558F, 125F);
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.txtRemarks.SerializableRtfString = resources.GetString("txtRemarks.SerializableRtfString");
+            this.txtRemarks.SizeF = new System.Drawing.SizeF(192F, 20F);
+            // 
+            // topMarginBand1
+            // 
+            this.topMarginBand1.HeightF = 50F;
+            this.topMarginBand1.Name = "topMarginBand1";
+            // 
+            // bottomMarginBand1
+            // 
+            this.bottomMarginBand1.HeightF = 50F;
+            this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // PackingListXr_Xls
             // 
@@ -507,11 +526,14 @@ namespace xPort5.Order.Invoice.Reports
             this.PageFooter,
             this.GroupHeader1,
             this.GroupHeader2,
-            this.GroupHeader3});
+            this.GroupHeader3,
+            this.topMarginBand1,
+            this.bottomMarginBand1});
             this.Margins = new System.Drawing.Printing.Margins(50, 0, 50, 50);
             this.PageHeight = 1169;
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
+            this.Version = "15.2";
             ((System.ComponentModel.ISupportInitialize)(this.txtArticleCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtColor)).EndInit();
@@ -523,9 +545,9 @@ namespace xPort5.Order.Invoice.Reports
             ((System.ComponentModel.ISupportInitialize)(this.txtCustName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtINDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtINNumber)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRemarks)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBoardDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCarrier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBoardDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRemarks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -578,5 +600,7 @@ namespace xPort5.Order.Invoice.Reports
         private DevExpress.XtraReports.UI.XRRichText txtCarrier;
         private DevExpress.XtraReports.UI.XRRichText txtBoardDate;
         private DevExpress.XtraReports.UI.XRRichText txtRemarks;
+        private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
+        private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
     }
 }
