@@ -85,6 +85,7 @@ namespace xPort5.Order.Invoice.Items
             this.lvwItems.Size = new System.Drawing.Size(300, 200);
             this.lvwItems.TabIndex = 1;
             this.lvwItems.DoubleClick += new System.EventHandler(this.lvwItems_DoubleClick);
+            this.lvwItems.ColumnClick += new Gizmox.WebGUI.Forms.ColumnClickEventHandler(this.lvwItems_ColumnClick);
             // 
             // colItemCode
             // 
@@ -104,6 +105,7 @@ namespace xPort5.Order.Invoice.Items
             // 
             this.colLN.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
             this.colLN.Image = null;
+            this.colLN.Tag = "Numeric";
             this.colLN.Text = "#";
             this.colLN.Width = 30;
             // 

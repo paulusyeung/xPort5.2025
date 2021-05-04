@@ -206,6 +206,7 @@ namespace xPort5.Order.Quotation
             this.lvwList.TabIndex = 2;
             this.lvwList.SelectedIndexChanged += new System.EventHandler(this.lvwList_SelectedIndexChanged);
             this.lvwList.DoubleClick += new System.EventHandler(this.lvwList_DoubleClick);
+            this.lvwList.ColumnClick += new Gizmox.WebGUI.Forms.ColumnClickEventHandler(this.lvwList_ColumnClick);
             // 
             // colItemNumber
             // 
@@ -244,6 +245,7 @@ namespace xPort5.Order.Quotation
             // 
             this.colLN.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
             this.colLN.Image = null;
+            this.colLN.Tag = "Numeric";
             this.colLN.Text = "#";
             this.colLN.Width = 30;
             // 

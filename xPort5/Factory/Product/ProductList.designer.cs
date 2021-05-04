@@ -83,6 +83,7 @@ namespace xPort5.Factory.Product
             // 
             this.colLN.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
             this.colLN.Image = null;
+            this.colLN.Tag = "Numeric";
             this.colLN.Text = "#";
             this.colLN.TextAlign = Gizmox.WebGUI.Forms.HorizontalAlignment.Center;
             this.colLN.Width = 30;
@@ -220,6 +221,7 @@ namespace xPort5.Factory.Product
             this.lvwProductList.TabIndex = 0;
             this.lvwProductList.UseInternalPaging = true;
             this.lvwProductList.DoubleClick += new System.EventHandler(this.lvwProductList_DoubleClick);
+            this.lvwProductList.ColumnClick += new Gizmox.WebGUI.Forms.ColumnClickEventHandler(this.lvwProductList_ColumnClick);
             // 
             // colProductId
             // 

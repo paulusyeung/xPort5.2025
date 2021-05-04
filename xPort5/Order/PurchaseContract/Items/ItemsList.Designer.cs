@@ -94,6 +94,7 @@ namespace xPort5.Order.PurchaseContract.Items
             this.lvwItems.Size = new System.Drawing.Size(300, 200);
             this.lvwItems.TabIndex = 1;
             this.lvwItems.DoubleClick += new System.EventHandler(this.lvwItems_DoubleClick);
+            this.lvwItems.ColumnClick += new Gizmox.WebGUI.Forms.ColumnClickEventHandler(this.lvwItems_ColumnClick);
             // 
             // colArticleCode
             // 
@@ -111,6 +112,7 @@ namespace xPort5.Order.PurchaseContract.Items
             // colLineNum
             // 
             this.colLineNum.Image = null;
+            this.colLineNum.Tag = "Numeric";
             this.colLineNum.Text = "#";
             this.colLineNum.Width = 20;
             // 

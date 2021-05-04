@@ -608,7 +608,7 @@ ORDER BY [LineNumber]
         }
         #endregion
 
-        private void lvwList_DoubleClick(object sender, EventArgs e)
+        private void lvwItems_DoubleClick(object sender, EventArgs e)
         {
             ShowRecord();
         }
