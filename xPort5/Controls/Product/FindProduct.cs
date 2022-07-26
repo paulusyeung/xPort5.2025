@@ -58,6 +58,10 @@ namespace xPort5.Controls.Product
             this.colSupplierRef.Text = oDict.GetWord("supplier_ref");
             this.colPackageName.Text = string.Format(nameReplace, oDict.GetWord("package"));
             this.colColor.Text = oDict.GetWord("color");
+            this.colInnerBox.Text = oDict.GetWord("Inner Box");
+            this.colOuterBox.Text = oDict.GetWord("Outer Box");
+            this.colUnit.Text = oDict.GetWord("unit");
+            //this.colCUFT.Text = oDict.GetWord("cuft");
 
             this.txtProductCode.Text = this.ProductCode;
 
@@ -89,6 +93,7 @@ namespace xPort5.Controls.Product
             bool canQuery = true;
             query = @"SELECT [ArticleId],[SKU],[ArticleCode],[ArticleName],[ArticleName_Chs],[ArticleName_Cht]
                                 ,[PackageCode],[PackageName],[SupplierName],[SuppRef],[SupplierCode],[ColorPattern]
+                                ,[Unit],[InnerBox],[OuterBox],[CUFT]
                             FROM [dbo].[vwProductWithSupplierAndPackage]
                             {0}
                             ORDER BY [ArticleCode],[ArticleName],[ArticleName_Chs],[ArticleName_Cht]";
@@ -141,6 +146,10 @@ namespace xPort5.Controls.Product
                     lvItem.SubItems.Add(reader.GetString(8)); // Supplier Name
                     lvItem.SubItems.Add(reader.GetString(9)); // Supplier Ref.
                     lvItem.SubItems.Add(reader.GetString(7)); // Package Name
+                    lvItem.SubItems.Add(reader.GetString(12)); // Unit
+                    lvItem.SubItems.Add(reader.GetDecimal(13).ToString("##0.00")); // Inner Box
+                    lvItem.SubItems.Add(reader.GetDecimal(14).ToString("##0.00")); // Outer Box
+                    lvItem.SubItems.Add(reader.GetDecimal(15).ToString("##0.00")); // CUFT
                 }
             }
             else

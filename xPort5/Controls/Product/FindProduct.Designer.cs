@@ -28,24 +28,28 @@ namespace xPort5.Controls.Product
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblColor = new Gizmox.WebGUI.Forms.Label();
             this.txtColor = new Gizmox.WebGUI.Forms.TextBox();
             this.btnSearch = new Gizmox.WebGUI.Forms.Button();
             this.resultPane = new Gizmox.WebGUI.Forms.Panel();
             this.lvResultList = new Gizmox.WebGUI.Forms.ListView();
-            this.colProductId = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colProductCode = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colColor = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colSupplierCode = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colPackageCode = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colProductName = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colSupplierName = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colSupplierRef = new Gizmox.WebGUI.Forms.ColumnHeader();
-            this.colPackageName = new Gizmox.WebGUI.Forms.ColumnHeader();
+            this.colProductId = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colProductCode = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colColor = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colSupplierCode = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colPackageCode = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colProductName = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colSupplierName = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colSupplierRef = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colPackageName = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
             this.txtProductCode = new Gizmox.WebGUI.Forms.TextBox();
             this.lblProductCode = new Gizmox.WebGUI.Forms.Label();
-            this.toolTip1 = new Gizmox.WebGUI.Forms.ToolTip(this.components);
+            this.toolTip1 = new Gizmox.WebGUI.Forms.ToolTip();
+            this.colUnit = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colInnerBox = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colOuterBox = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.colCUFT = ((Gizmox.WebGUI.Forms.ColumnHeader)(new Gizmox.WebGUI.Forms.ColumnHeader()));
+            this.resultPane.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblColor
@@ -76,18 +80,17 @@ namespace xPort5.Controls.Product
             // 
             // resultPane
             // 
-            this.resultPane.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
             this.resultPane.Controls.Add(this.lvResultList);
             this.resultPane.Dock = Gizmox.WebGUI.Forms.DockStyle.Bottom;
             this.resultPane.DockPadding.All = 3;
             this.resultPane.Location = new System.Drawing.Point(0, 87);
             this.resultPane.Name = "resultPane";
-            this.resultPane.Size = new System.Drawing.Size(537, 426);
+            this.resultPane.Padding = new Gizmox.WebGUI.Forms.Padding(3);
+            this.resultPane.Size = new System.Drawing.Size(720, 426);
             this.resultPane.TabIndex = 5;
             // 
             // lvResultList
             // 
-            this.lvResultList.Anchor = Gizmox.WebGUI.Forms.AnchorStyles.None;
             this.lvResultList.Columns.AddRange(new Gizmox.WebGUI.Forms.ColumnHeader[] {
             this.colProductId,
             this.colProductCode,
@@ -97,68 +100,62 @@ namespace xPort5.Controls.Product
             this.colProductName,
             this.colSupplierName,
             this.colSupplierRef,
-            this.colPackageName});
+            this.colPackageName,
+            this.colUnit,
+            this.colInnerBox,
+            this.colOuterBox,
+            this.colCUFT});
             this.lvResultList.DataMember = null;
             this.lvResultList.Dock = Gizmox.WebGUI.Forms.DockStyle.Fill;
-            this.lvResultList.ItemsPerPage = 20;
             this.lvResultList.Location = new System.Drawing.Point(3, 3);
             this.lvResultList.Name = "lvResultList";
-            this.lvResultList.Size = new System.Drawing.Size(531, 420);
+            this.lvResultList.Size = new System.Drawing.Size(714, 420);
             this.lvResultList.TabIndex = 0;
             this.lvResultList.DoubleClick += new System.EventHandler(this.lvResultList_DoubleClick);
             // 
             // colProductId
             // 
-            this.colProductId.Image = null;
             this.colProductId.Text = "";
             this.colProductId.Visible = false;
             this.colProductId.Width = 10;
             // 
             // colProductCode
             // 
-            this.colProductCode.Image = null;
             this.colProductCode.Text = "Product Code";
             this.colProductCode.Width = 80;
             // 
             // colColor
             // 
-            this.colColor.Image = null;
             this.colColor.Text = "Color";
             this.colColor.Width = 80;
             // 
             // colSupplierCode
             // 
-            this.colSupplierCode.Image = null;
             this.colSupplierCode.Text = "SupplierCode";
             this.colSupplierCode.Width = 80;
             // 
             // colPackageCode
             // 
-            this.colPackageCode.Image = null;
             this.colPackageCode.Text = "Package Code";
             this.colPackageCode.Width = 80;
             // 
             // colProductName
             // 
-            this.colProductName.Image = null;
             this.colProductName.Text = "ProdcutName";
             this.colProductName.Width = 80;
             // 
             // colSupplierName
             // 
-            this.colSupplierName.Image = null;
             this.colSupplierName.Text = "Supplier Name";
             this.colSupplierName.Width = 80;
             // 
             // colSupplierRef
             // 
-            this.colSupplierRef.Image = null;
             this.colSupplierRef.Text = "Supplier Ref.";
             this.colSupplierRef.Width = 80;
             // 
             // colPackageName
             // 
-            this.colPackageName.Image = null;
             this.colPackageName.Text = "Package Name";
             this.colPackageName.Width = 80;
             // 
@@ -178,6 +175,34 @@ namespace xPort5.Controls.Product
             this.lblProductCode.TabIndex = 2;
             this.lblProductCode.Text = "Product Code:";
             // 
+            // colUnit
+            // 
+            this.colUnit.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
+            this.colUnit.Text = "Unit";
+            this.colUnit.TextAlign = Gizmox.WebGUI.Forms.HorizontalAlignment.Center;
+            this.colUnit.Width = 40;
+            // 
+            // colInnerBox
+            // 
+            this.colInnerBox.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
+            this.colInnerBox.Text = "Inner Box";
+            this.colInnerBox.TextAlign = Gizmox.WebGUI.Forms.HorizontalAlignment.Right;
+            this.colInnerBox.Width = 80;
+            // 
+            // colOuterBox
+            // 
+            this.colOuterBox.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
+            this.colOuterBox.Text = "Outer Box";
+            this.colOuterBox.TextAlign = Gizmox.WebGUI.Forms.HorizontalAlignment.Right;
+            this.colOuterBox.Width = 80;
+            // 
+            // colCUFT
+            // 
+            this.colCUFT.ContentAlign = Gizmox.WebGUI.Forms.ExtendedHorizontalAlignment.Center;
+            this.colCUFT.Text = "CUFT";
+            this.colCUFT.TextAlign = Gizmox.WebGUI.Forms.HorizontalAlignment.Right;
+            this.colCUFT.Width = 80;
+            // 
             // FindProduct
             // 
             this.Controls.Add(this.lblProductCode);
@@ -186,11 +211,11 @@ namespace xPort5.Controls.Product
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtColor);
             this.Controls.Add(this.lblColor);
-            this.FormBorderStyle = Gizmox.WebGUI.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Size = new System.Drawing.Size(537, 513);
+            this.Size = new System.Drawing.Size(720, 513);
             this.Text = "FindProduct";
+            this.resultPane.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -214,7 +239,9 @@ namespace xPort5.Controls.Product
         private Gizmox.WebGUI.Forms.TextBox txtProductCode;
         private Gizmox.WebGUI.Forms.Label lblProductCode;
         private Gizmox.WebGUI.Forms.ToolTip toolTip1;
-
-
+        private Gizmox.WebGUI.Forms.ColumnHeader colUnit;
+        private Gizmox.WebGUI.Forms.ColumnHeader colInnerBox;
+        private Gizmox.WebGUI.Forms.ColumnHeader colOuterBox;
+        private Gizmox.WebGUI.Forms.ColumnHeader colCUFT;
     }
 }
