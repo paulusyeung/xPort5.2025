@@ -328,7 +328,7 @@ WHERE	LEN(PCNumber) > 0 AND CONVERT(NVARCHAR(10),ScheduledShipmentDate,126)>='" 
         {
             if (e.Node != null)
             {
-                SetTreeNodeSelection(e.Node);
+                //SetTreeNodeSelection(e.Node);
             }
         }
     }
