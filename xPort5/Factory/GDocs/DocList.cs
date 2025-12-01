@@ -427,7 +427,7 @@ namespace xPort5.Factory.GDocs
 
         private void ansToolbar_ButtonClick(object sender, ToolBarButtonClickEventArgs e)
         {
-            nxStudio.BaseClass.WordDict oDict = new nxStudio.BaseClass.WordDict(DAL.Common.Config.CurrentWordDict, DAL.Common.Config.CurrentLanguageId);
+            nxStudio.BaseClass.WordDict oDict = new nxStudio.BaseClass.WordDict(Common.Config.CurrentWordDict, Common.Config.CurrentLanguageId);
 
             if (!string.IsNullOrEmpty(e.Button.Name))
             {
@@ -474,7 +474,7 @@ namespace xPort5.Factory.GDocs
                                 _filename = item.Text;
                                 //Link.Open(new GatewayReference(this, "RetrieveFile"));
                                 xPort5.Controls.GData.GDocs.DownloadFile(_filename);
-                                string filePath = Path.Combine(DAL.Common.Config.OutBox, _filename);
+                                string filePath = Path.Combine(Common.Config.OutBox, _filename);
                                 if (File.Exists(filePath))
                                 {
                                     xPort5.Controls.FileDownloadGateway dl = new xPort5.Controls.FileDownloadGateway();
@@ -491,7 +491,7 @@ namespace xPort5.Factory.GDocs
                                 _filename = lvwFileExplorer.SelectedItem.Text;
                                 //Link.Open(new GatewayReference(this, "RetrieveFile"));
                                 xPort5.Controls.GData.GDocs.DownloadFile(_filename);
-                                string filePath = Path.Combine(DAL.Common.Config.OutBox, _filename);
+                                string filePath = Path.Combine(Common.Config.OutBox, _filename);
                                 if (File.Exists(filePath))
                                 {
                                     xPort5.Controls.FileDownloadGateway dl = new xPort5.Controls.FileDownloadGateway();
@@ -621,7 +621,7 @@ namespace xPort5.Factory.GDocs
         {
             string FileName = string.Empty;
             string FullName = string.Empty;
-            string inbox = DAL.Common.Config.InBox;
+            string inbox = Common.Config.InBox;
 
             OpenFileDialog oFileDialog = sender as OpenFileDialog;
 

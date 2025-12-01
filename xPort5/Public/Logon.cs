@@ -34,7 +34,7 @@ namespace xPort5.Public
 
         private void SetCaptions()
         {
-            nxStudio.BaseClass.WordDict oDict = new nxStudio.BaseClass.WordDict(DAL.Common.Config.CurrentWordDict, DAL.Common.Config.CurrentLanguageId);
+            nxStudio.BaseClass.WordDict oDict = new nxStudio.BaseClass.WordDict(Common.Config.CurrentWordDict, Common.Config.CurrentLanguageId);
 
             lblUserName.Text = oDict.GetWordWithColon("logon_user");
             lblPassword.Text = oDict.GetWordWithColon("password");

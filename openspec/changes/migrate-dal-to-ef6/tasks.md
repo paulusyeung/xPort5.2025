@@ -313,5 +313,5 @@
 - [x] 8.9 Update Admin Forms (xPort5\Admin\Coding) - 50 files COMPLETED
 - [x] 8.10 Update Product forms to use `xPort5.EF6` - 16 files COMPLETED
 - [x] 8.11 Update Order forms to use `xPort5.EF6` - ALL PHASES COMPLETED
-- [ ] 8.12 Remove all `using xPort5.DAL` statements from xPort5 project
-- [ ] 8.13 Remove xPort5.DAL project from solution
+- [x] 8.12 Remove all `using xPort5.DAL` statements from xPort5 project (CalcWizard.cs - COMPLETED)
+- [x] 8.13 Remove xPort5.DAL project from solution (xPort5.csproj - COMPLETED)

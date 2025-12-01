@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -9,6 +9,7 @@ using Google.GData.Documents;
 using Google.GData.Client;
 using Google.GData.Extensions;
 
+using xPort5.Common;
 
 namespace xPort5.Controls.GData
 {
@@ -218,7 +219,7 @@ namespace xPort5.Controls.GData
 
             foreach (DocumentEntry entry in feed.Entries)
             {
-                string filePath = Path.Combine(DAL.Common.Config.OutBox, entry.Title.Text);
+                string filePath = Path.Combine(Common.Config.OutBox, entry.Title.Text);
                 string uri = entry.Content.Src.ToString();
                 Uri sourceUri = new Uri(uri);
 

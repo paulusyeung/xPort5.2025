@@ -13,6 +13,8 @@ using Gizmox.WebGUI.Common.Interfaces;
 using System.Diagnostics;
 using System.Reflection;
 
+using xPort5.Common;
+
 #endregion
 
 namespace xPort5
@@ -56,7 +58,7 @@ namespace xPort5
 
         private void Shutdown()
         {
-            DAL.Common.Config.CurrentUserId = System.Guid.Empty;
+            Common.Config.CurrentUserId = System.Guid.Empty;
 
             xPort5.Controls.Log4net.LogInfo(xPort5.Controls.Log4net.LogAction.Logout, this.ToString());
 
