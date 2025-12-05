@@ -227,13 +227,28 @@ namespace xPort5.EF6
             return $"{date.Value.Year}-Q{quarter}";
         }
 
+        /// <summary>
+        /// Gets a list of "yyyy-MM" strings for the 12 months ending at referenceDate
+        /// </summary>
+        /// <param name="referenceDate">The end date (inclusive) for the 12-month window</param>
+        /// <returns>List of 12 strings, ordered from oldest to newest</returns>
+        private List<string> GetLast12MonthKeys(DateTime referenceDate)
+        {
+            var month = new DateTime(referenceDate.Year, referenceDate.Month, 1);
+            var monthStrings = new List<string>();
+            for (int i = 11; i >= 0; i--)
+            {
+                monthStrings.Add(month.AddMonths(-i).ToString("yyyy-MM"));
+            }
+            return monthStrings;
+        }
+
         #endregion
 
         #region Currency Conversion
 
         /// <summary>
         /// Converts an amount from one currency to another using exchange rates
-        /// Note: This is a placeholder - actual implementation will depend on your currency conversion logic
         /// </summary>
         /// <param name="amount">Amount to convert</param>
         /// <param name="fromCurrencyId">Source currency GUID</param>
@@ -254,9 +269,11 @@ namespace xPort5.EF6
                 return amount * exchangeRate.Value;
             }
 
-            // TODO: Implement actual currency conversion logic from T_Currency table
-            // For now, return original amount
-            return amount;
+            using (var context = GetDbContext())
+            {
+                var rate = GetExchangeRate(fromCurrencyId, toCurrencyId, context);
+                return amount * rate;
+            }
         }
 
         /// <summary>
@@ -273,10 +290,24 @@ namespace xPort5.EF6
                 return 1.0m;
             }
 
-            // TODO: Implement actual exchange rate lookup from T_Currency table
-            // This will depend on your currency table structure
-            // For now, return 1.0 as placeholder
-            return 1.0m;
+            // Lookup exchange rate from T_Currency
+            var fromCurrency = context.T_Currency.FirstOrDefault(c => c.CurrencyId == fromCurrencyId.Value);
+            var toCurrency = context.T_Currency.FirstOrDefault(c => c.CurrencyId == toCurrencyId.Value);
+            
+            if (fromCurrency == null || toCurrency == null)
+            {
+                return 1.0m; // Fallback to 1.0 if currency not found
+            }
+            
+            // Avoid division by zero
+            if (fromCurrency.XchgRate == 0)
+            {
+                return 1.0m;
+            }
+
+            // Exchange rates are stored relative to base currency (HKD)
+            // To convert from A to B: amount * (B.XchgRate / A.XchgRate)
+            return toCurrency.XchgRate / fromCurrency.XchgRate;
         }
 
         #endregion
@@ -302,12 +333,8 @@ namespace xPort5.EF6
                 var now = DateTime.Now;
                 var currentMonth = new DateTime(now.Year, now.Month, 1);
 
-                // Calculate month boundaries for the 12 months (current month - 11 through current month)
-                var monthBoundaries = new List<DateTime>();
-                for (int i = 11; i >= 0; i--)
-                {
-                    monthBoundaries.Add(currentMonth.AddMonths(-i));
-                }
+                // Helper to get year-month keys
+                var monthStrings = GetLast12MonthKeys(currentMonth);
 
                 // Query 1: Invoice Items (OrderINItems -> OrderIN -> OrderSCItems -> OrderQTItems -> OrderQT)
                 var itemsQuery = from item in context.OrderINItems
@@ -326,11 +353,11 @@ namespace xPort5.EF6
                                      INDate = invoice.INDate,
                                      INNumber = invoice.INNumber,
                                      ExchangeRate = qt.ExchangeRate,
-                                     INQty = item.Qty,
-                                     UnitAmount = qtItem.Amount,
-                                     ExtAmount = item.Qty * qtItem.Amount,
-                                     ExtHKDAmount = item.Qty * qtItem.Amount * qt.ExchangeRate,
-                                     HKDAmount = item.Qty * qtItem.Amount * qt.ExchangeRate
+                                     INQty = (decimal?)item.Qty, // Cast to nullable decimal for sum
+                                     UnitAmount = (decimal?)qtItem.Amount,
+                                     ExtAmount = (decimal?)(item.Qty * qtItem.Amount),
+                                     ExtHKDAmount = (decimal?)(item.Qty * qtItem.Amount * qt.ExchangeRate),
+                                     HKDAmount = (decimal?)(item.Qty * qtItem.Amount * qt.ExchangeRate)
                                  };
 
                 // Query 2: Invoice Charges (OrderINCharges -> OrderIN -> Customer -> T_Currency)
@@ -349,27 +376,42 @@ namespace xPort5.EF6
                                        INDate = invoice.INDate,
                                        INNumber = invoice.INNumber,
                                        ExchangeRate = currency != null ? currency.XchgRate : 0m,
-                                       INQty = 1m,
-                                       UnitAmount = charge.Amount,
-                                       ExtAmount = charge.Amount,
-                                       ExtHKDAmount = charge.Amount * (currency != null ? currency.XchgRate : 0m),
-                                       HKDAmount = charge.Amount * (currency != null ? currency.XchgRate : 0m)
+                                       INQty = (decimal?)1m,
+                                       UnitAmount = (decimal?)charge.Amount,
+                                       ExtAmount = (decimal?)charge.Amount,
+                                       ExtHKDAmount = (decimal?)(charge.Amount * (currency != null ? currency.XchgRate : 0m)),
+                                       HKDAmount = (decimal?)(charge.Amount * (currency != null ? currency.XchgRate : 0m))
                                    };
 
-                // Combine both queries (UNION ALL equivalent)
+                // Combine and optimize with server-side aggregation
                 var combinedQuery = itemsQuery.Concat(chargesQuery);
+                
+                // Group by invoice level fields to reduce rows transferred from database
+                var groupedQuery = from r in combinedQuery
+                                   group r by new 
+                                   { 
+                                       r.Region, 
+                                       r.CustName, 
+                                       r.INDate, 
+                                       r.INNumber, 
+                                       r.ExchangeRate 
+                                   } into g
+                                   select new
+                                   {
+                                       Region = g.Key.Region,
+                                       CustName = g.Key.CustName,
+                                       INDate = g.Key.INDate,
+                                       INNumber = g.Key.INNumber,
+                                       ExchangeRate = g.Key.ExchangeRate,
+                                       INQty = g.Sum(x => x.INQty) ?? 0,
+                                       UnitAmount = g.Max(x => x.UnitAmount) ?? 0, // Max or Avg, doesn't matter much for rolled up rows
+                                       ExtAmount = g.Sum(x => x.ExtAmount) ?? 0,
+                                       ExtHKDAmount = g.Sum(x => x.ExtHKDAmount) ?? 0,
+                                       HKDAmount = g.Sum(x => x.HKDAmount) ?? 0
+                                   };
 
-                // Execute query and calculate month-based amounts
-                var results = combinedQuery.ToList();
-
-                // Get year-month strings for comparison (matching SQL CONVERT(VARCHAR(7), date, 120))
-                var currentYearMonth = now.ToString("yyyy-MM");
-                var monthStrings = new List<string>();
-                for (int i = 11; i >= 0; i--)
-                {
-                    var monthDate = currentMonth.AddMonths(-i);
-                    monthStrings.Add(monthDate.ToString("yyyy-MM"));
-                }
+                // Materialize only the aggregated Invoice rows
+                var results = groupedQuery.ToList();
 
                 var summaryResults = results.Select(r =>
                 {
@@ -377,12 +419,10 @@ namespace xPort5.EF6
                     var invoiceYearMonth = invoiceDate.ToString("yyyy-MM");
                     var hkdAmount = r.HKDAmount;
 
-                    // Calculate BackLogAmt (amounts from months before the 12-month window)
-                    // SQL: CONVERT(VARCHAR(7),OrderIN.INDate,120) < CONVERT(VARCHAR(7),DATEADD(MONTH,-11,GETDATE()),120)
+                    // Calculate BackLogAmt
                     var backLogAmt = invoiceYearMonth.CompareTo(monthStrings[0]) < 0 ? hkdAmount : 0m;
 
-                    // Calculate Amt1-12 (amounts for each of the 12 months)
-                    // SQL: CONVERT(VARCHAR(7),OrderIN.INDate,120) = CONVERT(VARCHAR(7),DATEADD(MONTH,-11,GETDATE()),120)
+                    // Calculate Amt1-12
                     var amt1 = invoiceYearMonth == monthStrings[0] ? hkdAmount : 0m;
                     var amt2 = invoiceYearMonth == monthStrings[1] ? hkdAmount : 0m;
                     var amt3 = invoiceYearMonth == monthStrings[2] ? hkdAmount : 0m;
@@ -466,12 +506,8 @@ namespace xPort5.EF6
                 var toDateValue = toDateParsed.Value;
                 var toDateMonth = new DateTime(toDateValue.Year, toDateValue.Month, 1);
                 
-                var monthStrings = new List<string>();
-                for (int i = 11; i >= 0; i--)
-                {
-                    var monthDate = toDateMonth.AddMonths(-i);
-                    monthStrings.Add(monthDate.ToString("yyyy-MM"));
-                }
+                // Use helper to get month keys
+                var monthStrings = GetLast12MonthKeys(toDateMonth);
 
                 // Query 1: Invoice Items
                 var itemsQuery = from item in context.OrderINItems
@@ -492,11 +528,11 @@ namespace xPort5.EF6
                                      INDate = invoice.INDate,
                                      INNumber = invoice.INNumber,
                                      ExchangeRate = qt.ExchangeRate,
-                                     INQty = item.Qty,
-                                     UnitAmount = qtItem.Amount,
-                                     ExtAmount = item.Qty * qtItem.Amount,
-                                     ExtHKDAmount = item.Qty * qtItem.Amount * qt.ExchangeRate,
-                                     HKDAmount = item.Qty * qtItem.Amount * qt.ExchangeRate
+                                     INQty = (decimal?)item.Qty,
+                                     UnitAmount = (decimal?)qtItem.Amount,
+                                     ExtAmount = (decimal?)(item.Qty * qtItem.Amount),
+                                     ExtHKDAmount = (decimal?)(item.Qty * qtItem.Amount * qt.ExchangeRate),
+                                     HKDAmount = (decimal?)(item.Qty * qtItem.Amount * qt.ExchangeRate)
                                  };
 
                 // Query 2: Invoice Charges
@@ -517,15 +553,40 @@ namespace xPort5.EF6
                                        INDate = invoice.INDate,
                                        INNumber = invoice.INNumber,
                                        ExchangeRate = currency != null ? currency.XchgRate : 0m,
-                                       INQty = 1m,
-                                       UnitAmount = charge.Amount,
-                                       ExtAmount = charge.Amount,
-                                       ExtHKDAmount = charge.Amount * (currency != null ? currency.XchgRate : 0m),
-                                       HKDAmount = charge.Amount * (currency != null ? currency.XchgRate : 0m)
+                                       INQty = (decimal?)1m,
+                                       UnitAmount = (decimal?)charge.Amount,
+                                       ExtAmount = (decimal?)charge.Amount,
+                                       ExtHKDAmount = (decimal?)(charge.Amount * (currency != null ? currency.XchgRate : 0m)),
+                                       HKDAmount = (decimal?)(charge.Amount * (currency != null ? currency.XchgRate : 0m))
                                    };
 
                 var combinedQuery = itemsQuery.Concat(chargesQuery);
-                var results = combinedQuery.ToList();
+                
+                // Server-side Aggregation
+                var groupedQuery = from r in combinedQuery
+                                   group r by new 
+                                   { 
+                                       r.Region, 
+                                       r.CustName, 
+                                       r.INDate, 
+                                       r.INNumber, 
+                                       r.ExchangeRate 
+                                   } into g
+                                   select new
+                                   {
+                                       Region = g.Key.Region,
+                                       CustName = g.Key.CustName,
+                                       INDate = g.Key.INDate,
+                                       INNumber = g.Key.INNumber,
+                                       ExchangeRate = g.Key.ExchangeRate,
+                                       INQty = g.Sum(x => x.INQty) ?? 0,
+                                       UnitAmount = g.Max(x => x.UnitAmount) ?? 0,
+                                       ExtAmount = g.Sum(x => x.ExtAmount) ?? 0,
+                                       ExtHKDAmount = g.Sum(x => x.ExtHKDAmount) ?? 0,
+                                       HKDAmount = g.Sum(x => x.HKDAmount) ?? 0
+                                   };
+
+                var results = groupedQuery.ToList();
 
                 var summaryResults = results.Select(r =>
                 {
@@ -934,6 +995,7 @@ namespace xPort5.EF6
                 }
 
                 // Query 1: Invoice Items
+                // Note: Using nullable decimal casts for aggregation safety
                 var itemsQuery = from item in context.OrderINItems
                                  join invoice in context.OrderIN on item.OrderINId equals invoice.OrderINId
                                  join scItem in context.OrderSCItems on item.OrderSCItemsId equals scItem.OrderSCItemsId
@@ -957,8 +1019,8 @@ namespace xPort5.EF6
                                      INDate = invoice.INDate,
                                      INNumber = invoice.INNumber ?? string.Empty,
                                      Currency = currency != null ? currency.CurrencyCode : string.Empty,
-                                     ExtAmount = item.Qty * qtItem.Amount,
-                                     ExtHKDAmount = item.Qty * qtItem.Amount * qt.ExchangeRate
+                                     ExtAmount = (decimal?)(item.Qty * qtItem.Amount),
+                                     ExtHKDAmount = (decimal?)(item.Qty * qtItem.Amount * qt.ExchangeRate)
                                  };
 
                 // Query 2: Invoice Charges
@@ -982,12 +1044,36 @@ namespace xPort5.EF6
                                        INDate = invoice.INDate,
                                        INNumber = invoice.INNumber ?? string.Empty,
                                        Currency = currency != null ? currency.CurrencyCode : string.Empty,
-                                       ExtAmount = charge.Amount,
-                                       ExtHKDAmount = charge.Amount * (currency != null ? currency.XchgRate : 0m)
+                                       ExtAmount = (decimal?)charge.Amount,
+                                       ExtHKDAmount = (decimal?)(charge.Amount * (currency != null ? currency.XchgRate : 0m))
                                    };
 
                 var combinedQuery = itemsQuery.Concat(chargesQuery);
-                var results = combinedQuery
+
+                // Group by Invoice (and other display columns) to aggregate
+                var groupedQuery = from r in combinedQuery
+                                   group r by new
+                                   {
+                                       r.Region,
+                                       r.CustName,
+                                       r.PricingTerms,
+                                       r.INDate,
+                                       r.INNumber,
+                                       r.Currency
+                                   } into g
+                                   select new
+                                   {
+                                       Region = g.Key.Region,
+                                       CustName = g.Key.CustName,
+                                       PricingTerms = g.Key.PricingTerms,
+                                       INDate = g.Key.INDate,
+                                       INNumber = g.Key.INNumber,
+                                       Currency = g.Key.Currency,
+                                       ExtAmount = g.Sum(x => x.ExtAmount) ?? 0,
+                                       ExtHKDAmount = g.Sum(x => x.ExtHKDAmount) ?? 0
+                                   };
+
+                var results = groupedQuery
                     .OrderBy(r => r.Region)
                     .ThenBy(r => r.CustName)
                     .ThenBy(r => r.INDate)
@@ -1041,7 +1127,7 @@ namespace xPort5.EF6
                             from article in articleGroup.DefaultIfEmpty()
                             where customerIds.Contains(sc.CustomerId)
                                 && (!fromDateParsed.HasValue || custShipping.ShippedOn >= fromDateParsed.Value)
-                                && (custShipping.QtyShipped < custShipping.QtyOrdered || custShipping.QtyShipped == null)
+                                && (custShipping.QtyShipped < custShipping.QtyOrdered)
                                 && sc.SCNumber != null
                                 && (string.IsNullOrEmpty(currencyCode) || supplierCurrency.CurrencyCode == currencyCode)
                             select new
@@ -1234,32 +1320,29 @@ namespace xPort5.EF6
     /// <summary>
     /// Extension methods for converting LINQ query results to DataSet
     /// </summary>
+    /// <summary>
+    /// Extension methods for converting LINQ query results to DataSet
+    /// </summary>
     public static class OlapServiceExtensions
     {
         /// <summary>
-        /// Converts a LINQ query result to a DataSet with a single DataTable
+        /// Converts a collection of entities to a DataSet with a single DataTable
         /// </summary>
         /// <typeparam name="T">Entity or anonymous type</typeparam>
-        /// <param name="query">LINQ query result</param>
+        /// <param name="source">Source collection (IEnumerable or IQueryable)</param>
         /// <param name="tableName">Name for the DataTable (default: "Table")</param>
         /// <returns>DataSet containing the query results</returns>
-        public static DataSet ToDataSet<T>(this IQueryable<T> query, string tableName = "Table")
+        public static DataSet ToDataSet<T>(this IEnumerable<T> source, string tableName = "Table")
         {
             var dataSet = new DataSet();
             var dataTable = new DataTable(tableName);
+            dataSet.Tables.Add(dataTable);
 
-            // Execute query to get results
-            var results = query.ToList();
+            // Avoid multiple enumerations
+            var results = source.ToList();
 
-            if (results.Count == 0)
-            {
-                dataSet.Tables.Add(dataTable);
-                return dataSet;
-            }
-
-            // Get properties from first item (works for both entity types and anonymous types)
-            var firstItem = results[0];
-            var properties = firstItem.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            // Get properties from type T (works for anonymous types too)
+            var properties = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
 
             // Create columns
             foreach (var property in properties)
@@ -1275,6 +1358,12 @@ namespace xPort5.EF6
                 dataTable.Columns.Add(property.Name, columnType ?? typeof(object));
             }
 
+            // If no results, return empty table with columns structure
+            if (results.Count == 0)
+            {
+                return dataSet;
+            }
+
             // Add rows
             foreach (var item in results)
             {
@@ -1282,32 +1371,18 @@ namespace xPort5.EF6
                 foreach (var property in properties)
                 {
                     var value = property.GetValue(item);
-                    if (value == null)
-                    {
-                        row[property.Name] = DBNull.Value;
-                    }
-                    else
-                    {
-                        row[property.Name] = value;
-                    }
+                    row[property.Name] = value ?? DBNull.Value;
                 }
                 dataTable.Rows.Add(row);
             }
 
-            dataSet.Tables.Add(dataTable);
             return dataSet;
         }
 
-        /// <summary>
-        /// Converts a list of entities to a DataSet with a single DataTable
-        /// </summary>
-        /// <typeparam name="T">Entity or anonymous type</typeparam>
-        /// <param name="list">List of entities</param>
-        /// <param name="tableName">Name for the DataTable (default: "Table")</param>
-        /// <returns>DataSet containing the list items</returns>
-        public static DataSet ToDataSet<T>(this IEnumerable<T> list, string tableName = "Table")
+        // Overload for IQueryable to ensure it uses the same logic (IQueryable inherits IEnumerable, but explicit is sometimes clearer)
+        public static DataSet ToDataSet<T>(this IQueryable<T> query, string tableName = "Table")
         {
-            return list.AsQueryable().ToDataSet(tableName);
+            return query.AsEnumerable().ToDataSet(tableName);
         }
     }
 }
