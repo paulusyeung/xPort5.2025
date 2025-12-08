@@ -2731,8 +2731,21 @@ namespace xPort5.EF6
             }
             catch (Exception ex)
             {
-                // Fallback or logging could go here
-                throw new InvalidOperationException(string.Format("Failed to apply dynamic filter: {0} (Original: {1})", linqExpression, sqlWhereClause), ex);
+                // Log the error for debugging
+                System.Diagnostics.Debug.WriteLine($"ViewService.ApplyDynamicWhere - Failed to apply dynamic filter");
+                System.Diagnostics.Debug.WriteLine($"  Converted LINQ Expression: {linqExpression}");
+                System.Diagnostics.Debug.WriteLine($"  Original SQL WHERE clause: {sqlWhereClause}");
+                System.Diagnostics.Debug.WriteLine($"  Error: {ex.Message}");
+                if (ex.InnerException != null)
+                {
+                    System.Diagnostics.Debug.WriteLine($"  Inner Exception: {ex.InnerException.Message}");
+                }
+                System.Diagnostics.Debug.WriteLine($"  Stack Trace: {ex.StackTrace}");
+                
+                // Re-throw with more context
+                throw new InvalidOperationException(
+                    string.Format("Failed to apply dynamic filter: {0} (Original: {1})", linqExpression, sqlWhereClause), 
+                    ex);
             }
         }
 
